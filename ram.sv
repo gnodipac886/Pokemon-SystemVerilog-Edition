@@ -40,7 +40,7 @@ module  CharacterRam
 );
 
 // mem has width of 3 bits and a total of 400 addresses
-logic [23:0] mem [0:30352];
+logic [23:0] mem [0:30351];
 
 initial
 begin

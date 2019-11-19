@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Nov 14 17:35:41 2019
+Analysis & Synthesis Status : Successful - Tue Nov 19 00:47:00 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Pokemon-SVE
 Top-level Entity Name : lab8
 Family : Cyclone IV E
-Total logic elements : 3,619
-    Total combinational functions : 2,663
-    Dedicated logic registers : 2,178
-Total registers : 2178
+Total logic elements : 3,612
+    Total combinational functions : 2,657
+    Dedicated logic registers : 2,154
+Total registers : 2154
 Total pins : 128
 Total virtual pins : 0
-Total memory bits : 11,392
-Embedded Multiplier 9-bit elements : 4
+Total memory bits : 894,592
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 2

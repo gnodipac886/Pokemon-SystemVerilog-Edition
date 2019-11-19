@@ -121,6 +121,19 @@ module lab8( input               CLOCK_50,
                                             .DrawX(DrawX),
                                             .DrawY(DrawY)
                                             );
+
+   logic [7:0] FBB, FBG, FBR;
+
+   frameBuffer fbinstance(  .Clk(Clk), 
+                            .VGACLK(VGA_CLK), 
+                            .DrawEn(1'b1),
+                            .DRAWX(DrawX), 
+                            .DRAWY(DrawY),
+                            .playerDir(2'b00),
+                            .R(VGA_R), 
+                            .G(VGA_G), 
+                            .B(VGA_B)
+                            );
     
     // Which signal should be frame_clk?
     ball ball_instance( .Clk(Clk),
@@ -132,13 +145,13 @@ module lab8( input               CLOCK_50,
                         .is_ball(is_ball)
                         );
     
-   color_mapper color_instance( .is_ball(is_ball),
+   /*color_mapper color_instance( .is_ball(is_ball),
                                 .DrawX(DrawX),
                                 .DrawY(DrawY),
                                 .VGA_R(VGA_R),
                                 .VGA_G(VGA_G),
                                 .VGA_B(VGA_B)
-                                );
+                                );*/
     
     // Display keycode on hex display
     HexDriver hex_inst_0 (keycode[3:0], HEX0);
