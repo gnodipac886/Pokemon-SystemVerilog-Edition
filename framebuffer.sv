@@ -11,9 +11,9 @@ module frameBuffer(	input 	logic 	Clk, VGACLK, DrawEn,
 	logic FBwe, Charwe;
 
 	always_comb begin
-		FBread_address = DRAWY * 240 + DRAWX;
-		if(DRAWX < 9'd240 && DRAWY < 9'd160) begin
-			R 	= 	FBdata_Out[23:15];
+		FBread_address = (DRAWY / 2) * 240 + (DRAWX / 2);
+		if(DRAWX < 9'd480 && DRAWY < 9'd320) begin
+			R 	= 	FBdata_Out[23:16];
 			G 	= 	FBdata_Out[15:8];
 			B 	= 	FBdata_Out[7:0];
 		end 
