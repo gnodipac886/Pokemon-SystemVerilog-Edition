@@ -1,6 +1,6 @@
-module frameBuffer(	input 	logic 	Clk, VGACLK, DrawEn,
+module frameBuffer(	input 	logic 	Clk, VGACLK, DrawEn, Reset, 
 					input 	logic 	[9:0] DRAWX, DRAWY,
-					input 	logic 	[1:0] playerDir,
+					input 	logic 	[7:0] keycode,
 					output 	logic 	[7:0] R, G, B
 					);
 
@@ -11,8 +11,8 @@ module frameBuffer(	input 	logic 	Clk, VGACLK, DrawEn,
 	logic FBwe, Charwe;
 
 	always_comb begin
-		FBread_address = (DRAWY / 2) * 240 + (DRAWX / 2);
-		if(DRAWX < 9'd480 && DRAWY < 9'd320) begin
+		FBread_address = ((DRAWY - 80) / 2) * 240 + ((DRAWX - 80) / 2);
+		if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
 			R 	= 	FBdata_Out[23:16];
 			G 	= 	FBdata_Out[15:8];
 			B 	= 	FBdata_Out[7:0];
@@ -20,14 +20,8 @@ module frameBuffer(	input 	logic 	Clk, VGACLK, DrawEn,
 		else begin
 			R 	= 	8'h00;
 			G 	= 	8'h00;
-			B 	= 	8'hff;
+			B 	= 	8'h00;
 		end 
-
-		/*color test
-		R 	= 	8'hff;
-		G 	= 	8'hff;
-		B 	= 	8'h00;
-		*/
 	end 
 
 	FramebufferRam FBRam(
@@ -47,5 +41,26 @@ module frameBuffer(	input 	logic 	Clk, VGACLK, DrawEn,
 							.Clk(Clk),
 							.data_Out(Chardata_Out)
 						);
+
+endmodule
+
+module frameBufferFSM(	input 	logic 			Clk, VGACLK, Reset,
+						input 	logic 	[9:0] 	DRAWX, 	DRAWY,
+						input 	logic 	[1:0] 	playerDir
+						);
+	enum logic [3:0] {start, flash_press_enter, fade, draw_map, draw_character, hold} state, next_state;
+
+	always_ff @ (posedge Clk) begin
+		if(Reset) begin
+			state 	<= 	start;
+		end 
+		else begin
+			state 	<= 	next_state;
+		end 
+	end 
+
+	always_comb begin
+
+	end 
 
 endmodule

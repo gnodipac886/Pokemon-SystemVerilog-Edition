@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Nov 14, 2019 5:30:33 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1573774233618</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Nov 19, 2019 7:32:29 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1574213549326</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Eric\Desktop\Pokemon-SVE\software\Pokemon-SVE_app_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\lab8_soc.sopcinfo</SopcDesignFile>
