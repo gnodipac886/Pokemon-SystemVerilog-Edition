@@ -484,14 +484,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[3]",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[2]",
-					"strict" : false
-				},
-				{
 					"name" : "altera_reserved_tms",
 					"strict" : false
 				},

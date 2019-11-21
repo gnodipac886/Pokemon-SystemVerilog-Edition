@@ -102,7 +102,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, DrawEn, Reset,
 							next_pixel 	= 	24'h000000;
 							/*-------------draw character--------------*/	
 							//if(DRAWX >= 10'd319 && DRAWX < 10'd336 && DRAWY >= 10'd239 && DRAWY < 10'd261) begin	//if within the character box
-							if(DRAWX >= 10'd119 && DRAWX < 10'd136 && DRAWY >= 10'd79 && DRAWY < 10'd96) begin
+							if(DRAWX >= 10'd119 && DRAWX < 10'd136 && DRAWY >= 10'd79 && DRAWY < 10'd101) begin
 								if(~charIsMoving) begin		//character is not moving
 									//Charread_address = ((DRAWY - 229) + direction * 21) * 271 + ((DRAWX - 319) + 16);
 									Charread_address = ((DRAWY - 79) + direction * 21) * 271 + ((DRAWX - 119) + 16);
@@ -177,7 +177,7 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 	*/
 
 	logic 	[1:0]	next_direction;
-	logic 	[1:0]	charFrameCounter, next_charFrameCounter;
+	logic 	[4:0]	charFrameCounter, next_charFrameCounter;
 	logic 	[5:0] 	fade_counter, fade_counter_next;
 	logic 	[7:0] 	W 	= 	8'h1A;
     logic 	[7:0] 	A 	= 	8'h04;
@@ -188,10 +188,11 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 
 	always_ff @ (posedge VGA_VS) begin
 		if(Reset) begin
+			//state 			<= 	start_screen;
 			state 			<= 	start_screen;
 			fade_counter 	<= 	6'd0;
 			direction 		<= 	2'd0;
-			charFrameCounter<= 	2'd0; 	
+			charFrameCounter<= 	5'd0; 	
 		end 
 		else begin
 			state 			<= 	next_state;
@@ -205,14 +206,14 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 		next_state 			= 	state;
 		unique case (state)
 			start_screen 		:	
-				if(keycode == 8'h0a) begin
+				if(keycode == 8'h28) begin
 					next_state	= 	fade;
 				end 
 				else begin
 					next_state 	=	flash_press_enter;
 				end 
 			flash_press_enter 	: 
-				if(keycode == 8'h0a) begin
+				if(keycode == 8'h28) begin
 					next_state	= 	fade;
 				end 
 				else begin
@@ -260,32 +261,41 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 			draw_main_game 		: //NEED TO IMPLEMENT RUNNING
 				begin
 					state_num 	= 	4'd3;
-					if(charFrameCounter == 2'd2) begin
-						next_charFrameCounter 	= 	2'd0;
-					end 
 					if(keycode == S) begin
 						next_direction 			= 	2'd0;
 						charIsMoving 			= 	1'b1;
 						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 2'd1;
+						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
 					end 
 					else if(keycode == W) begin
 						next_direction 			= 	2'd1;
 						charIsMoving 			= 	1'b1;
 						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 2'd1;
+						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
 					end 
 					else if(keycode == A) begin
 						next_direction 			= 	2'd2;
 						charIsMoving 			= 	1'b1;
 						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 2'd1;
+						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
 					end 
 					else if(keycode == D) begin
 						next_direction 			= 	2'd3;
 						charIsMoving 			= 	1'b1;
 						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 2'd1;
+						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
+					end 
+					if(charFrameCounter < 5'd10) begin
+						charMoveFrame = 2'd0;
+					end
+					else if(charFrameCounter < 5'd20) begin
+						charMoveFrame = 2'd1;
+					end 
+					else if(charFrameCounter < 5'd30) begin
+						charMoveFrame = 2'd2;
+					end 
+					if(charFrameCounter == 5'd29) begin
+						next_charFrameCounter 	= 	2'd0;
 					end 
 				end		
 
