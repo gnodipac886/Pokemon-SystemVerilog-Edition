@@ -112,32 +112,64 @@ module lab8( input               CLOCK_50,
     
     // TODO: Fill in the connections for the rest of the modules 
    VGA_controller vga_controller_instance(  .Clk(Clk),
-                                            .Reset(Reset_h),
-                                            .VGA_HS(VGA_HS),
-                                            .VGA_VS(VGA_VS),
-                                            .VGA_CLK(VGA_CLK),
-                                            .VGA_BLANK_N(VGA_BLANK_N),
-                                            .VGA_SYNC_N(VGA_SYNC_N),
-                                            .DrawX(DrawX),
-                                            .DrawY(DrawY)
-                                            );
+											.Reset(Reset_h),
+											.VGA_HS(VGA_HS),
+											.VGA_VS(VGA_VS),
+											.VGA_CLK(VGA_CLK),
+											.VGA_BLANK_N(VGA_BLANK_N),
+											.VGA_SYNC_N(VGA_SYNC_N),
+											.DrawX(DrawX),
+											.DrawY(DrawY)
+											);
 
-   logic [7:0] FBB, FBG, FBR;
+	logic 			charIsMoving, charIsRunning;
+	logic 	[1:0]  	direction, charMoveFrame;
+	logic 	[3:0]	state_num;
+	logic 	[7:0]  	FBB, FBG, FBR;
+	/*test*/
+   	logic [3:0] teststate;
+   	always_comb begin
+   		teststate = 0;
+   		if(~KEY[2] && KEY[3])
+   			teststate = 2;
+   		if(~KEY[3] && KEY[2])
+   			teststate = 3;
+   	end 
 
-   frameBuffer fbinstance(  .Clk(Clk), 
-                            .VGACLK(VGA_CLK), 
-                            .DrawEn(1'b1),
-                            .Reset(Reset_h),
-                            .DRAWX(DrawX), 
-                            .DRAWY(DrawY),
-                            .keycode(keycode),
-                            .R(VGA_R), 
-                            .G(VGA_G), 
-                            .B(VGA_B)
-                            );
+
+   frameDrawer fdinstance(  .Clk(Clk), 
+							.VGACLK(VGA_CLK), 
+							.DrawEn(1'b1),
+							.Reset(Reset_h),
+							.charIsMoving(charIsMoving),
+							.charIsRunning(charIsRunning),
+							.direction(direction),
+							.charMoveFrame(charMoveFrame),
+							.state_num(teststate),
+							.DRAWX(DrawX), 
+							.DRAWY(DrawY),
+							.keycode(keycode),
+							.R(VGA_R), 
+							.G(VGA_G), 
+							.B(VGA_B)
+							);
+
+   gameFSM gameInstance(    .Clk(Clk),
+							.VGACLK(VGACLK),
+							.VGA_VS(VGA_VS),
+							.Reset(Reset_h),
+							.keycode(keycode),
+							.DRAWX(DrawX),
+							.DRAWY(DrawY),
+							.charIsMoving(charIsMoving),
+							.charIsRunning(charIsRunning),
+							.direction(direction),
+							.charMoveFrame(charMoveFrame),
+							.state_num(state_num)
+							);
     
     // Which signal should be frame_clk?
-    ball ball_instance( .Clk(Clk),
+    /*ball ball_instance( .Clk(Clk),
                         .Reset(Reset_ball),
                         .frame_clk(VGA_VS),
                         .keycode(keycode),
@@ -146,7 +178,7 @@ module lab8( input               CLOCK_50,
                         .is_ball(is_ball)
                         );
     
-   /*color_mapper color_instance( .is_ball(is_ball),
+   color_mapper color_instance( .is_ball(is_ball),
                                 .DrawX(DrawX),
                                 .DrawY(DrawY),
                                 .VGA_R(VGA_R),
