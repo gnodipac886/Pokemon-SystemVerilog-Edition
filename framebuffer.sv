@@ -21,68 +21,80 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, DrawEn, Reset,
 			Character picture dimension: 271(x) * 112(y)
 			((DRAWY - 229) + direction * 21) * 271 + ((DRAWX - 319) + charMoveFrame * 16)
 
+		we are drawing the next pixels during the blank intervals
+
 		state map:
 			0: 	start_screen
 			1: 	flash_press_enter
 			2: 	fade
 			3: 	draw_main_game
 			4: 	hold
+
 	*/
 
 	logic [23:0] FBdata_In, FBdata_Out, next_pixel;
-	logic [23:0] Chardata_Out;
+	logic [23:0] Chardata_Out, Gymdata_Out;
 	logic [18:0] FBwrite_address, FBread_address;
-	logic [18:0] Charread_address;
+	logic [18:0] Charread_address, Gymread_address;
+	logic [9:0] DRAWX_next, DRAWY_next;
 	logic FBwe, Charwe;
 
-	always_ff @ (posedge Clk) begin
-		//if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
-		if(DRAWX > 10'd0 && DRAWX < 10'd320 && DRAWY > 10'd0 && DRAWY < 10'd240) begin
-			R 	<= 	FBdata_Out[23:16];
-			G 	<= 	FBdata_Out[15:8];
-			B 	<= 	FBdata_Out[7:0];
-		end 
-		else begin
-			R 	<= 	8'h00;
-			G 	<= 	8'h00;
-			B 	<= 	8'h00;
-		end 
-	end 
-
-	// always_comb begin
+	// always_ff @ (posedge VGACLK) begin
 	// 	if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
-	// 		R 	= 	FBdata_Out[23:16];
-	// 		G 	= 	FBdata_Out[15:8];
-	// 		B 	= 	FBdata_Out[7:0];
+	// 	//if(DRAWX >= 10'd0 && DRAWX < 10'd320 && DRAWY >= 10'd0 && DRAWY < 10'd240) begin
+	// 		R 	<= 	FBdata_Out[23:16];
+	// 		G 	<= 	FBdata_Out[15:8];
+	// 		B 	<= 	FBdata_Out[7:0];
 	// 	end 
 	// 	else begin
-	// 		R 	= 	8'h00;
-	// 		G 	= 	8'h00;
-	// 		B 	= 	8'h00;
+	// 		R 	<= 	8'h00;
+	// 		G 	<= 	8'h00;
+	// 		B 	<= 	8'h00;
 	// 	end 
 	// end 
 
 	always_comb begin
-		//FBread_address = ((DRAWY - 80) / 2) * 240 + ((DRAWX - 80) / 2);
-		FBread_address = ((DRAWY - 80)) * 240 + ((DRAWX - 80));
-		FBwrite_address = FBread_address;
+		if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
+			R 	= 	FBdata_Out[23:16];
+			G 	= 	FBdata_Out[15:8];
+			B 	= 	FBdata_Out[7:0];
+		end 
+		else begin
+			R 	= 	8'h00;
+			G 	= 	8'h00;
+			B 	= 	8'h00;
+		end 
+	end 
+
+	always_comb begin
+		FBread_address 	= 	((DRAWY - 80) / 2) * 240 + ((DRAWX - 80) / 2);	//MAYBE DURING THE WRITING PROCESS OF THE NEXT PIXEL, WE NEED DIFFERENT ADDRESS
+		FBwrite_address	= 	(DRAWY - 80) * 240 + (DRAWX - 560);
+		// FBread_address = ((DRAWY - 80)) * 240 + ((DRAWX - 80));
+		//FBwrite_address = FBread_address; 
+		DRAWX_next 		= 	DRAWX - 560;	//drawing this during blanking
+		DRAWY_next 		= 	DRAWY - 80;
 	end 
 
 	/*-------------------next pixel logic--------------------*/
 	always_ff @ (posedge Clk) begin
-		//if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
-		if(DRAWX > 10'd0 && DRAWX < 10'd320 && DRAWY > 10'd0 && DRAWY < 10'd240) begin
-			FBwe 		<= 	1'b1;
-			FBdata_In 	<= 	next_pixel;
+		if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
+		// if(DRAWX >= 10'd0 && DRAWX < 10'd320 && DRAWY >= 10'd0 && DRAWY < 10'd240) begin
+			FBwe 			<= 	1'b0;
 		end 
+		//if DRAWX is between 560-799 and DRAWY is between 80 and 239 then we can draw the next frame based on inputs
+		else if(DRAWX >= 560 && DRAWX <= 799 && DRAWY >= 80 && DRAWY <= 239) begin 
+			FBwe 			<= 	1'b1;			//allows us to write to memory
+			FBdata_In 		<= 	next_pixel;		//write in the next pixel
+		end
 		else begin
-			FBwe 		<= 	1'b0;
+			FBwe 		<= 	1'b0;			//if anything else, we turn off the write enable
 		end 
 	end 
 
 	always_comb begin
 		next_pixel 			= 	FBdata_Out;
 		Charread_address	= 	19'd0;
+		Gymread_address = 	DRAWY_next * 471 + DRAWX_next;
 		unique case (state_num)
 			4'd0 	: 	
 						begin 	//start_screen
@@ -99,28 +111,43 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, DrawEn, Reset,
 			4'd3 	: 	begin	//draw_main_game, first draw map, then draw character
 							/*-------------draw map--------------*/	
 							//@@IMPLEMENT!!!
-							next_pixel 	= 	24'h000000;
+							next_pixel 	= 	Gymdata_Out;
+							//next_pixel 	= 	24'hE8E088;
 							/*-------------draw character--------------*/	
-							//if(DRAWX >= 10'd319 && DRAWX < 10'd336 && DRAWY >= 10'd239 && DRAWY < 10'd261) begin	//if within the character box
-							if(DRAWX >= 10'd119 && DRAWX < 10'd136 && DRAWY >= 10'd79 && DRAWY < 10'd101) begin
+							if(DRAWX_next >= 10'd111 && DRAWX_next <= 10'd127 && DRAWY_next >= 10'd69 && DRAWY_next <= 10'd90) begin	//if within the character box
+							// if(DRAWX >= 10'd119 && DRAWX < 10'd136 && DRAWY >= 10'd79 && DRAWY < 10'd101) begin
 								if(~charIsMoving) begin		//character is not moving
-									//Charread_address = ((DRAWY - 229) + direction * 21) * 271 + ((DRAWX - 319) + 16);
-									Charread_address = ((DRAWY - 79) + direction * 21) * 271 + ((DRAWX - 119) + 16);
+									//Charread_address = ((DRAWY - 239) + direction * 21) * 271 + ((DRAWX - 319) + 16);
+									if(direction == 2'd3) begin		//if the character is facing right
+										Charread_address = ((DRAWY_next - 69) + 42) * 271 - (DRAWX_next - 10'd111) + 31;
+										// Charread_address = ((DRAWY - 79) + 42) * 271 - ((DRAWX - 119) + 31);
+									end 
+									else begin
+										Charread_address = ((DRAWY_next - 69) + direction * 21) * 271 + ((DRAWX_next - 111) + 16);
+										// Charread_address = ((DRAWY - 79) + direction * 21) * 271 + ((DRAWX - 119) + 16);
+									end 
 									if(Chardata_Out != 24'hFF00FF) begin	//if not transparent color, draw
 										next_pixel 	= 	Chardata_Out;
 									end 
-									else begin
-										next_pixel 	=	FBdata_Out;
-									end 
+									// else begin
+									// 	next_pixel 	=	FBdata_Out;
+									// end 
 								end 
 								else begin
-									// Charread_address = ((DRAWY - 229) + direction * 21) * 271 + ((DRAWX - 319) + charMoveFrame * 16 + charIsRunning * 48);
-									Charread_address = ((DRAWY - 79) + direction * 21) * 271 + ((DRAWX - 119) + charMoveFrame * 16 + charIsRunning * 48);
+									// Charread_address = ((DRAWY - 219) / 2 + direction * 21) * 271 + ((DRAWX - 319) + charMoveFrame * 16 + charIsRunning * 48);
+									if(direction == 2'd3) begin //if the character is facing right
+										Charread_address = ((DRAWY_next - 69) + 42) * 271 - (DRAWX_next - 111) + charMoveFrame * 16 + charIsRunning * 48 + 15;
+										// Charread_address = ((DRAWY - 79) + 42) * 271 - ((DRAWX - 119) + 15 + charMoveFrame * 16 + charIsRunning * 48);
+									end 
+									else begin
+										Charread_address = ((DRAWY_next - 69) + direction * 21) * 271 + ((DRAWX_next - 111) + charMoveFrame * 16 + charIsRunning * 48);
+										// Charread_address = ((DRAWY - 79) + direction * 21) * 271 + ((DRAWX - 119) + charMoveFrame * 16 + charIsRunning * 48);
+									end 
 									if(Chardata_Out != 24'hFF00FF) begin	
 										next_pixel 	= 	Chardata_Out;
 									end
 									else begin
-										next_pixel 	= 	24'h000000;	//CHANGE THIS LATER
+										next_pixel 	= 	FBdata_Out;	//CHANGE THIS LATER
 									end 
 								end
 							end
@@ -147,159 +174,14 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, DrawEn, Reset,
 							.data_Out(Chardata_Out)
 						);
 
+	GymMapRam 	GymRam(		.data_In(24'd0),
+							.write_address(19'd0),
+							.read_address(Gymread_address),
+							.we(1'b0),
+							.Clk(Clk),
+							.data_Out(Gymdata_Out)
+						);
+
 endmodule
 
 
-module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
-				input 	logic 	[7:0] 	keycode,
-				input 	logic 	[9:0] 	DRAWX, 	DRAWY,
-				output 	logic 			charIsMoving, charIsRunning,
-				output	logic 	[1:0]	direction, charMoveFrame,
-				output 	logic 	[3:0]	state_num
-				);
-
-	/*
-		direction map:
-			0: 	down
-			1:	up
-			2:	left
-			3:	right
-
-		charMoveFrame:
-			0, 1, 2 for movement.
-
-		state map:
-			0: 	start_screen
-			1: 	flash_press_enter
-			2: 	fade
-			3: 	draw_main_game
-			4: 	hold
-	*/
-
-	logic 	[1:0]	next_direction;
-	logic 	[4:0]	charFrameCounter, next_charFrameCounter;
-	logic 	[5:0] 	fade_counter, fade_counter_next;
-	logic 	[7:0] 	W 	= 	8'h1A;
-    logic 	[7:0] 	A 	= 	8'h04;
-    logic 	[7:0] 	S 	= 	8'h16;
-    logic 	[7:0] 	D 	= 	8'h07;
-
-	enum logic [3:0] {start_screen, flash_press_enter, fade, draw_main_game, hold} state, next_state;
-
-	always_ff @ (posedge VGA_VS) begin
-		if(Reset) begin
-			//state 			<= 	start_screen;
-			state 			<= 	start_screen;
-			fade_counter 	<= 	6'd0;
-			direction 		<= 	2'd0;
-			charFrameCounter<= 	5'd0; 	
-		end 
-		else begin
-			state 			<= 	next_state;
-			fade_counter 	<= 	fade_counter_next;
-			direction 		<= 	next_direction;
-			charFrameCounter<= 	next_charFrameCounter;
-		end 
-	end 
-
-	always_comb begin
-		next_state 			= 	state;
-		unique case (state)
-			start_screen 		:	
-				if(keycode == 8'h28) begin
-					next_state	= 	fade;
-				end 
-				else begin
-					next_state 	=	flash_press_enter;
-				end 
-			flash_press_enter 	: 
-				if(keycode == 8'h28) begin
-					next_state	= 	fade;
-				end 
-				else begin
-					next_state 	=	start_screen;
-				end 
-			fade 				:
-				if(fade_counter == 6'd50) begin
-					next_state 	= 	draw_main_game;
-				end 
-			draw_main_game 		:
-				if(keycode == 8'h1B) begin
-					next_state 	=	start_screen;
-				end
-			hold 				: 	;
-		endcase // state
-	end 
-
-	always_comb begin
-		fade_counter_next 		= 	fade_counter;
-		next_charFrameCounter 	= 	charFrameCounter;
-		next_direction			= 	direction;
-		charIsMoving 			= 	1'b0;
-		charIsRunning			= 	1'b0;
-		charMoveFrame			= 	2'b00;
-		state_num 				= 	4'b0000;
-		
-		case (state) 
-			start_screen		: 	;
-
-			flash_press_enter	:
-				begin
-					state_num 	= 	4'd1;
-				end 
-
-			fade 				:
-				begin
-					if(fade_counter == 6'd50) begin
-						fade_counter_next = 6'd0;
-					end 
-					else begin
-						fade_counter_next = fade_counter + 6'd1;
-					end 
-					state_num 	= 	4'd2;
-				end
-			draw_main_game 		: //NEED TO IMPLEMENT RUNNING
-				begin
-					state_num 	= 	4'd3;
-					if(keycode == S) begin
-						next_direction 			= 	2'd0;
-						charIsMoving 			= 	1'b1;
-						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
-					end 
-					else if(keycode == W) begin
-						next_direction 			= 	2'd1;
-						charIsMoving 			= 	1'b1;
-						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
-					end 
-					else if(keycode == A) begin
-						next_direction 			= 	2'd2;
-						charIsMoving 			= 	1'b1;
-						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
-					end 
-					else if(keycode == D) begin
-						next_direction 			= 	2'd3;
-						charIsMoving 			= 	1'b1;
-						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
-					end 
-					if(charFrameCounter < 5'd10) begin
-						charMoveFrame = 2'd0;
-					end
-					else if(charFrameCounter < 5'd20) begin
-						charMoveFrame = 2'd1;
-					end 
-					else if(charFrameCounter < 5'd30) begin
-						charMoveFrame = 2'd2;
-					end 
-					if(charFrameCounter == 5'd29) begin
-						next_charFrameCounter 	= 	2'd0;
-					end 
-				end		
-
-			hold 				:	;
-		endcase 
-	end 
-endmodule

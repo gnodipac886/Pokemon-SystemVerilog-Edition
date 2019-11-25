@@ -1,5 +1,5 @@
 Flow report for Pokemon-SVE
-Thu Nov 21 01:20:36 2019
+Mon Nov 25 05:14:40 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 21 01:20:36 2019       ;
+; Flow Status                        ; Successful - Mon Nov 25 05:14:40 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Pokemon-SVE                                 ;
 ; Top-level Entity Name              ; lab8                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 3,708 / 114,480 ( 3 % )                     ;
-;     Total combinational functions  ; 3,075 / 114,480 ( 3 % )                     ;
-;     Dedicated logic registers      ; 2,161 / 114,480 ( 2 % )                     ;
-; Total registers                    ; 2280                                        ;
+; Total logic elements               ; 33,314 / 114,480 ( 29 % )                   ;
+;     Total combinational functions  ; 32,622 / 114,480 ( 28 % )                   ;
+;     Dedicated logic registers      ; 2,136 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 2255                                        ;
 ; Total pins                         ; 128 / 529 ( 24 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 1,661,440 / 3,981,312 ( 42 % )              ;
+; Total memory bits                  ; 1,661,920 / 3,981,312 ( 42 % )              ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
 ; Total PLLs                         ; 2 / 4 ( 50 % )                              ;
 +------------------------------------+---------------------------------------------+
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2019 01:15:30 ;
+; Start date & time ; 11/25/2019 04:48:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Pokemon-SVE         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
 ; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name     ; Section Id     ;
 +-------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 61811222300825.157432053014424                             ; --            ; --              ; --             ;
+; COMPILER_SIGNATURE_ID               ; 61811222300825.157468609200584                             ; --            ; --              ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                          ; --            ; --              ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)                            ; <None>        ; --              ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                       ; --            ; --              ; eda_simulation ;
@@ -107,12 +107,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:58     ; 1.0                     ; 5072 MB             ; 00:03:39                           ;
-; Fitter               ; 00:01:16     ; 1.1                     ; 5858 MB             ; 00:02:11                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4731 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:10     ; 1.5                     ; 4930 MB             ; 00:00:11                           ;
-; EDA Netlist Writer   ; 00:00:19     ; 1.0                     ; 4749 MB             ; 00:00:10                           ;
-; Total                ; 00:04:49     ; --                      ; --                  ; 00:06:17                           ;
+; Analysis & Synthesis ; 00:17:57     ; 1.0                     ; 5242 MB             ; 00:18:20                           ;
+; Fitter               ; 00:07:28     ; 1.1                     ; 6264 MB             ; 00:10:50                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4796 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:13     ; 1.5                     ; 5283 MB             ; 00:00:16                           ;
+; EDA Netlist Writer   ; 00:00:30     ; 1.0                     ; 5070 MB             ; 00:00:26                           ;
+; Total                ; 00:26:13     ; --                      ; --                  ; 00:29:57                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

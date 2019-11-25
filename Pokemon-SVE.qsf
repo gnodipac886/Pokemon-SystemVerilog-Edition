@@ -580,6 +580,7 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity D
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE gameFSM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ram.sv
 set_global_assignment -name SYSTEMVERILOG_FILE framebuffer.sv
 set_global_assignment -name SDC_FILE lab8.sdc

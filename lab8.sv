@@ -142,7 +142,7 @@ module lab8( input               CLOCK_50,
 							.DrawEn(1'b1),
 							.Reset(Reset_h),
 							.charIsMoving(charIsMoving), 
-							.charIsRunning(charIsRunning),
+							.charIsRunning(~KEY[2]), //change back!
 							.direction(direction),
 							.charMoveFrame(charMoveFrame),
 							.state_num(state_num),
