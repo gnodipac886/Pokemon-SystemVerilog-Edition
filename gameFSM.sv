@@ -25,7 +25,7 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 	*/
 
 	logic 	[1:0]	next_direction;
-	logic 	[4:0]	charFrameCounter, next_charFrameCounter;
+	logic 	[5:0]	charFrameCounter, next_charFrameCounter;
 	logic 	[5:0] 	fade_counter, fade_counter_next;
 	logic 	[7:0] 	W 	= 	8'h1A;
     logic 	[7:0] 	A 	= 	8'h04;
@@ -133,20 +133,20 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 						charIsRunning			= 	1'b0;
 						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
 					end 
-					if(charFrameCounter < 5'd10) begin
+					if(charFrameCounter < 6'd10) begin
 						charMoveFrame = 2'd0;
 					end
-					else if(charFrameCounter < 5'd20) begin
+					else if(charFrameCounter < 6'd20) begin
 						charMoveFrame = 2'd1;
 					end 
-					else if(charFrameCounter < 5'd30) begin
+					else if(charFrameCounter < 6'd30) begin
 						charMoveFrame = 2'd2;
 					end 
-					else if(charFrameCounter < 5'd40) begin
+					else if(charFrameCounter < 6'd40) begin
 						charMoveFrame = 2'd1;
 					end 
-					if(charFrameCounter == 5'd39) begin
-						next_charFrameCounter 	= 	2'd0;
+					if(charFrameCounter == 6'd39) begin
+						next_charFrameCounter 	= 	6'd0;
 					end 
 				end		
 

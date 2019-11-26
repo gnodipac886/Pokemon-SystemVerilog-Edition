@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Pokemon-SVE
-Mon Nov 25 05:14:40 2019
+Tue Nov 26 00:57:17 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Nov 25 05:14:40 2019 ;
+; EDA Netlist Writer Status ; Successful - Tue Nov 26 00:57:17 2019 ;
 ; Revision Name             ; Pokemon-SVE                           ;
 ; Top-level Entity Name     ; lab8                                  ;
 ; Family                    ; Cyclone IV E                          ;
@@ -88,7 +88,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 25 05:14:10 2019
+    Info: Processing started: Tue Nov 26 00:56:45 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Pokemon-SVE -c Pokemon-SVE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Pokemon-SVE_7_1200mv_85c_slow.svo in folder "C:/Users/Eric/Desktop/Pokemon-SVE/simulation/modelsim/" for EDA simulation tool
@@ -100,9 +100,9 @@ Info (204019): Generated file Pokemon-SVE_7_1200mv_0c_v_slow.sdo in folder "C:/U
 Info (204019): Generated file Pokemon-SVE_min_1200mv_0c_v_fast.sdo in folder "C:/Users/Eric/Desktop/Pokemon-SVE/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file Pokemon-SVE_v.sdo in folder "C:/Users/Eric/Desktop/Pokemon-SVE/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 5070 megabytes
-    Info: Processing ended: Mon Nov 25 05:14:40 2019
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 5063 megabytes
+    Info: Processing ended: Tue Nov 26 00:57:18 2019
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:29
 
 

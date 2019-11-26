@@ -41,6 +41,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 	logic [9:0]		charxcurrpos, 		charycurrpos;
 	logic [9:0]		charxnextpos, 		charynextpos;
 	logic 			FBwe, 				Charwe;
+	logic 			everyotherframe, 	everyotherframe_next;
 
 	assign 			charxgymstartpos 	= 	9'd224;		//these are the starting x and y positions for the character
 	assign			charygymstartpos 	= 	9'd362;		//these tell you the top left point of the character box
@@ -100,6 +101,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 	always_ff @ (posedge VGA_VS) begin		//updates every frame
 		charxcurrpos 	<= 	charxnextpos;
 		charycurrpos 	<= 	charynextpos;
+		everyotherframe <=	everyotherframe_next;
 	end 
 
 	always_comb begin
@@ -108,16 +110,18 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 		Gymread_address 	= 	DRAWY_next * 464 + DRAWX_next;
 		charxnextpos		= 	charxcurrpos;
 		charynextpos 		= 	charycurrpos;
+		everyotherframe_next=	everyotherframe;
 		unique case (state_num)
 			4'd0 	: 	
 						begin 	//start_screen
-							FBread_address 	=	DRAWY_next * 240 * DRAWX_next; 
+							//FBread_address 	=	DRAWY_next * 240 * DRAWX_next; 
 							next_pixel 		= 	FBdata_Out;  //THIS WILL CHANGE IF WE WANT TO GO BACK AFTER PLAYING GAME
 							charxnextpos 	= 	charxgymstartpos;
 							charynextpos	=	charygymstartpos;
+							everyotherframe_next 	= 	1'b0;
 						end 
 			4'd1 	: 	begin	//flash_press_enter
-							FBread_address 	=	DRAWY_next * 240 * DRAWX_next; 
+							//FBread_address 	=	DRAWY_next * 240 * DRAWX_next; 
 							next_pixel 		= 	FBdata_Out;  //THIS WILL CHANGE WHEN WE ACTUALLY DRAW THE ENTER SIGN 
 						end 
 			4'd2 	: 	begin	//fade
@@ -129,8 +133,32 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 							/*-------------draw map--------------*/	
 							//@@IMPLEMENT!!!
 							Gymread_address = 	(DRAWY_next + charycurrpos - 69) * 464 + (DRAWX_next + charxcurrpos - 111);
-							next_pixel 		= 	Gymdata_Out;
-
+							if((DRAWY_next + charycurrpos - 69) >= 10'd0 && (DRAWY_next + charycurrpos - 69) < 10'd388 &&
+							(DRAWX_next + charxcurrpos - 111) >= 10'd0 && (DRAWX_next + charxcurrpos - 111) < 10'd464) begin
+								next_pixel 		= 	Gymdata_Out;
+							end 
+							else begin
+								next_pixel 		= 	24'h000000;
+							end
+							//calculate how much to move
+							if(charIsMoving && everyotherframe) begin
+								unique case (direction)	//tile size is 16x16
+									2'd0 		: 	begin	//down
+														charynextpos 	= 	charIsRunning 	?	(charycurrpos + 2) 	: 	(charycurrpos + 1);
+													end		
+									2'd1 		: 	begin	//up
+														charynextpos 	= 	charIsRunning 	?	(charycurrpos - 2) 	: 	(charycurrpos - 1);
+													end	
+									2'd2 		: 	begin	//left
+														charxnextpos 	= 	charIsRunning 	?	(charxcurrpos - 2) 	: 	(charxcurrpos - 1);
+													end	
+									2'd3 		: 	begin	//right
+														charxnextpos 	= 	charIsRunning 	?	(charxcurrpos + 2) 	: 	(charxcurrpos + 1);
+													end	
+									default 	: 	;
+								endcase // direction
+							end
+							everyotherframe_next= 	~everyotherframe;
 
 							//next_pixel 	= 	24'hE8E088;
 							/*-------------draw character--------------*/	
@@ -166,9 +194,9 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 									if(Chardata_Out != 24'hFF00FF) begin	
 										next_pixel 	= 	Chardata_Out;
 									end
-									else begin
-										next_pixel 	= 	FBdata_Out;	//CHANGE THIS LATER
-									end 
+									// else begin
+									// 	next_pixel 	= 	FBdata_Out;	//CHANGE THIS LATER
+									// end 
 								end
 							end
 						end 
