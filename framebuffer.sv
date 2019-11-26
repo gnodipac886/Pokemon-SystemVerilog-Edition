@@ -105,12 +105,16 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 	always_comb begin
 		next_pixel 			= 	FBdata_Out;
 		Charread_address	= 	19'd0;
-		Gymread_address 	= 	DRAWY_next * 471 + DRAWX_next;
+		Gymread_address 	= 	DRAWY_next * 464 + DRAWX_next;
+		charxnextpos		= 	charxcurrpos;
+		charynextpos 		= 	charycurrpos;
 		unique case (state_num)
 			4'd0 	: 	
 						begin 	//start_screen
 							FBread_address 	=	DRAWY_next * 240 * DRAWX_next; 
 							next_pixel 		= 	FBdata_Out;  //THIS WILL CHANGE IF WE WANT TO GO BACK AFTER PLAYING GAME
+							charxnextpos 	= 	charxgymstartpos;
+							charynextpos	=	charygymstartpos;
 						end 
 			4'd1 	: 	begin	//flash_press_enter
 							FBread_address 	=	DRAWY_next * 240 * DRAWX_next; 
@@ -124,7 +128,8 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 			4'd3 	: 	begin	//draw_main_game, first draw map, then draw character
 							/*-------------draw map--------------*/	
 							//@@IMPLEMENT!!!
-							next_pixel 	= 	Gymdata_Out;
+							Gymread_address = 	(DRAWY_next + charycurrpos - 69) * 464 + (DRAWX_next + charxcurrpos - 111);
+							next_pixel 		= 	Gymdata_Out;
 
 
 							//next_pixel 	= 	24'hE8E088;
