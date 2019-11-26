@@ -107,7 +107,7 @@ module  GymMapRam
 );
 
 // mem has width of 3 bits and a total of 400 addresses
-logic [7:0] mem [0:184160];
+logic [7:0] mem [0:180031];
 logic [23:0] decoded;
 
 initial

@@ -139,6 +139,7 @@ module lab8( input               CLOCK_50,
 
    frameDrawer fdinstance(  .Clk(Clk), 
 							.VGACLK(VGA_CLK), 
+							.VGA_VS(VGA_VS),
 							.DrawEn(1'b1),
 							.Reset(Reset_h),
 							.charIsMoving(charIsMoving), 

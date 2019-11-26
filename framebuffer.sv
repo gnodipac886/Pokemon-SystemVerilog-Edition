@@ -1,4 +1,4 @@
-module frameDrawer(	input 	logic 			Clk, VGACLK, DrawEn, Reset, 
+module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset, 
 					input 	logic 			charIsMoving, charIsRunning,
 					input	logic 	[1:0]	direction, charMoveFrame,
 					input 	logic 	[3:0]	state_num,
@@ -32,12 +32,18 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, DrawEn, Reset,
 
 	*/
 
-	logic [23:0] FBdata_In, FBdata_Out, next_pixel;
-	logic [23:0] Chardata_Out, Gymdata_Out;
-	logic [18:0] FBwrite_address, FBread_address;
-	logic [18:0] Charread_address, Gymread_address;
-	logic [9:0] DRAWX_next, DRAWY_next;
-	logic FBwe, Charwe;
+	logic [23:0] 	FBdata_In, 			FBdata_Out, 		next_pixel;
+	logic [23:0] 	Chardata_Out, 		Gymdata_Out;
+	logic [18:0] 	FBwrite_address, 	FBread_address;
+	logic [18:0] 	Charread_address, 	Gymread_address;
+	logic [9:0] 	DRAWX_next, 		DRAWY_next;
+	logic [9:0] 	charxgymstartpos,	charygymstartpos;
+	logic [9:0]		charxcurrpos, 		charycurrpos;
+	logic [9:0]		charxnextpos, 		charynextpos;
+	logic 			FBwe, 				Charwe;
+
+	assign 			charxgymstartpos 	= 	9'd224;		//these are the starting x and y positions for the character
+	assign			charygymstartpos 	= 	9'd362;		//these tell you the top left point of the character box
 
 	// always_ff @ (posedge VGACLK) begin
 	// 	if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
@@ -87,31 +93,40 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, DrawEn, Reset,
 			FBdata_In 		<= 	next_pixel;		//write in the next pixel
 		end
 		else begin
-			FBwe 		<= 	1'b0;			//if anything else, we turn off the write enable
+			FBwe 			<= 	1'b0;			//if anything else, we turn off the write enable
 		end 
+	end 
+
+	always_ff @ (posedge VGA_VS) begin		//updates every frame
+		charxcurrpos 	<= 	charxnextpos;
+		charycurrpos 	<= 	charynextpos;
 	end 
 
 	always_comb begin
 		next_pixel 			= 	FBdata_Out;
 		Charread_address	= 	19'd0;
-		Gymread_address = 	DRAWY_next * 471 + DRAWX_next;
+		Gymread_address 	= 	DRAWY_next * 471 + DRAWX_next;
 		unique case (state_num)
 			4'd0 	: 	
 						begin 	//start_screen
-							next_pixel 	= 	FBdata_Out;  //THIS WILL CHANGE IF WE WANT TO GO BACK AFTER PLAYING GAME
+							FBread_address 	=	DRAWY_next * 240 * DRAWX_next; 
+							next_pixel 		= 	FBdata_Out;  //THIS WILL CHANGE IF WE WANT TO GO BACK AFTER PLAYING GAME
 						end 
 			4'd1 	: 	begin	//flash_press_enter
-							next_pixel 	= 	FBdata_Out;  //THIS WILL CHANGE WHEN WE ACTUALLY DRAW THE ENTER SIGN 
+							FBread_address 	=	DRAWY_next * 240 * DRAWX_next; 
+							next_pixel 		= 	FBdata_Out;  //THIS WILL CHANGE WHEN WE ACTUALLY DRAW THE ENTER SIGN 
 						end 
 			4'd2 	: 	begin	//fade
-							next_pixel 	= 	(R < 8'd5) ? (next_pixel & 24'h00FFFF) : {next_pixel[23:16] - 8'd5, next_pixel[15:0]};
-							next_pixel 	= 	(G < 8'd5) ? (next_pixel & 24'hFF00FF) : {next_pixel[23:16], next_pixel[15:8] - 8'd5, next_pixel[7:0]};
-							next_pixel 	= 	(B < 8'd5) ? (next_pixel & 24'hFFFF00) : {next_pixel[23:8], next_pixel[7:0] - 8'd5};
+							next_pixel 		= 	(R < 8'd5) ? (next_pixel & 24'h00FFFF) : {next_pixel[23:16] - 8'd5, next_pixel[15:0]};
+							next_pixel 		= 	(G < 8'd5) ? (next_pixel & 24'hFF00FF) : {next_pixel[23:16], next_pixel[15:8] - 8'd5, next_pixel[7:0]};
+							next_pixel 		= 	(B < 8'd5) ? (next_pixel & 24'hFFFF00) : {next_pixel[23:8], next_pixel[7:0] - 8'd5};
 						end 
 			4'd3 	: 	begin	//draw_main_game, first draw map, then draw character
 							/*-------------draw map--------------*/	
 							//@@IMPLEMENT!!!
 							next_pixel 	= 	Gymdata_Out;
+
+
 							//next_pixel 	= 	24'hE8E088;
 							/*-------------draw character--------------*/	
 							if(DRAWX_next >= 10'd111 && DRAWX_next <= 10'd127 && DRAWY_next >= 10'd69 && DRAWY_next <= 10'd90) begin	//if within the character box

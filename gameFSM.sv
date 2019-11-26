@@ -142,7 +142,10 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 					else if(charFrameCounter < 5'd30) begin
 						charMoveFrame = 2'd2;
 					end 
-					if(charFrameCounter == 5'd29) begin
+					else if(charFrameCounter < 5'd40) begin
+						charMoveFrame = 2'd1;
+					end 
+					if(charFrameCounter == 5'd39) begin
 						next_charFrameCounter 	= 	2'd0;
 					end 
 				end		
