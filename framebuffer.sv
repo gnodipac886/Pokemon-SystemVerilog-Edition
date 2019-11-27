@@ -45,22 +45,10 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 
 	assign 			charxgymstartpos 	= 	9'd224;		//these are the starting x and y positions for the character
 	assign			charygymstartpos 	= 	9'd362;		//these tell you the top left point of the character box
-
-	// always_ff @ (posedge VGACLK) begin
-	// 	if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
-	// 	//if(DRAWX >= 10'd0 && DRAWX < 10'd320 && DRAWY >= 10'd0 && DRAWY < 10'd240) begin
-	// 		R 	<= 	FBdata_Out[23:16];
-	// 		G 	<= 	FBdata_Out[15:8];
-	// 		B 	<= 	FBdata_Out[7:0];
-	// 	end 
-	// 	else begin
-	// 		R 	<= 	8'h00;
-	// 		G 	<= 	8'h00;
-	// 		B 	<= 	8'h00;
-	// 	end 
-	// end 
-
+	
 	always_comb begin
+		FBread_address 	= 	((DRAWY - 80) / 2) * 240 + ((DRAWX - 80) / 2);	//MAYBE DURING THE WRITING PROCESS OF THE NEXT PIXEL, WE NEED DIFFERENT ADDRESS
+		FBwrite_address	= 	(DRAWY - 80) * 240 + (DRAWX - 560);
 		if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
 			R 	= 	FBdata_Out[23:16];
 			G 	= 	FBdata_Out[15:8];
@@ -71,25 +59,19 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 			G 	= 	8'h00;
 			B 	= 	8'h00;
 		end 
-	end 
-
-	always_comb begin
-		FBread_address 	= 	((DRAWY - 80) / 2) * 240 + ((DRAWX - 80) / 2);	//MAYBE DURING THE WRITING PROCESS OF THE NEXT PIXEL, WE NEED DIFFERENT ADDRESS
-		FBwrite_address	= 	(DRAWY - 80) * 240 + (DRAWX - 560);
 		// FBread_address = ((DRAWY - 80)) * 240 + ((DRAWX - 80));
-		//FBwrite_address = FBread_address; 
 		DRAWX_next 		= 	DRAWX - 560;	//drawing this during blanking
 		DRAWY_next 		= 	DRAWY - 80;
 	end 
 
 	/*-------------------next pixel logic--------------------*/
-	always_ff @ (posedge Clk) begin
+	always_ff @ (posedge VGACLK) begin
 		if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
 		// if(DRAWX >= 10'd0 && DRAWX < 10'd320 && DRAWY >= 10'd0 && DRAWY < 10'd240) begin
 			FBwe 			<= 	1'b0;
 		end 
 		//if DRAWX is between 560-799 and DRAWY is between 80 and 239 then we can draw the next frame based on inputs
-		else if(DRAWX >= 560 && DRAWX <= 799 && DRAWY >= 80 && DRAWY <= 239) begin 
+		if(DRAWX >= 560 && DRAWX <= 799 && DRAWY >= 80 && DRAWY <= 239) begin 
 			FBwe 			<= 	1'b1;			//allows us to write to memory
 			FBdata_In 		<= 	next_pixel;		//write in the next pixel
 		end
@@ -135,31 +117,50 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 							Gymread_address = 	(DRAWY_next + charycurrpos - 69) * 464 + (DRAWX_next + charxcurrpos - 111);
 							if((DRAWY_next + charycurrpos - 69) >= 10'd0 && (DRAWY_next + charycurrpos - 69) < 10'd388 &&
 							(DRAWX_next + charxcurrpos - 111) >= 10'd0 && (DRAWX_next + charxcurrpos - 111) < 10'd464) begin
-								next_pixel 		= 	Gymdata_Out;
+								next_pixel 	= 	Gymdata_Out;
 							end 
 							else begin
-								next_pixel 		= 	24'h000000;
+								next_pixel 	= 	24'h000000;
 							end
 							//calculate how much to move
-							if(charIsMoving && everyotherframe) begin
+							if(charIsMoving) begin
 								unique case (direction)	//tile size is 16x16
 									2'd0 		: 	begin	//down
-														charynextpos 	= 	charIsRunning 	?	(charycurrpos + 2) 	: 	(charycurrpos + 1);
+														if (everyotherframe) begin
+															charynextpos 	=	charycurrpos + 1;
+														end 
+														else begin
+															charynextpos 	= 	charIsRunning 	?	(charycurrpos + 1) 	: 	(charycurrpos);
+													 	end
 													end		
 									2'd1 		: 	begin	//up
-														charynextpos 	= 	charIsRunning 	?	(charycurrpos - 2) 	: 	(charycurrpos - 1);
+														if (everyotherframe) begin
+															charynextpos 	=	charycurrpos - 1;
+														end 
+														else begin
+															charynextpos 	= 	charIsRunning 	?	(charycurrpos - 1) 	: 	(charycurrpos);
+													 	end
 													end	
 									2'd2 		: 	begin	//left
-														charxnextpos 	= 	charIsRunning 	?	(charxcurrpos - 2) 	: 	(charxcurrpos - 1);
+														if (everyotherframe) begin
+															charxnextpos 	=	charxcurrpos - 1;
+														end 
+														else begin
+															charxnextpos 	= 	charIsRunning 	?	(charxcurrpos - 1) 	: 	(charxcurrpos);
+													 	end
 													end	
 									2'd3 		: 	begin	//right
-														charxnextpos 	= 	charIsRunning 	?	(charxcurrpos + 2) 	: 	(charxcurrpos + 1);
+														if (everyotherframe) begin
+															charxnextpos 	=	charxcurrpos + 1;
+														end 
+														else begin
+															charxnextpos 	= 	charIsRunning 	?	(charxcurrpos + 1) 	: 	(charxcurrpos);
+													 	end
 													end	
 									default 	: 	;
 								endcase // direction
 							end
 							everyotherframe_next= 	~everyotherframe;
-
 							//next_pixel 	= 	24'hE8E088;
 							/*-------------draw character--------------*/	
 							if(DRAWX_next >= 10'd111 && DRAWX_next <= 10'd127 && DRAWY_next >= 10'd69 && DRAWY_next <= 10'd90) begin	//if within the character box
@@ -176,10 +177,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 									end 
 									if(Chardata_Out != 24'hFF00FF) begin	//if not transparent color, draw
 										next_pixel 	= 	Chardata_Out;
-									end 
-									// else begin
-									// 	next_pixel 	=	FBdata_Out;
-									// end 
+									end
 								end 
 								else begin
 									// Charread_address = ((DRAWY - 219) / 2 + direction * 21) * 271 + ((DRAWX - 319) + charMoveFrame * 16 + charIsRunning * 48);
@@ -194,9 +192,6 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 									if(Chardata_Out != 24'hFF00FF) begin	
 										next_pixel 	= 	Chardata_Out;
 									end
-									// else begin
-									// 	next_pixel 	= 	FBdata_Out;	//CHANGE THIS LATER
-									// end 
 								end
 							end
 						end 
@@ -210,7 +205,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 							.write_address(FBwrite_address),
 							.read_address(FBread_address),
 							.we(FBwe),
-							.Clk(Clk), //if any error CHECK HERE!!!!!!!!!!!!!!!!!!!!!
+							.Clk(VGACLK), //if any error CHECK HERE!!!!!!!!!!!!!!!!!!!!!
 							.data_Out(FBdata_Out)
 						);
 
@@ -218,7 +213,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 							.write_address(19'd0),
 							.read_address(Charread_address),
 							.we(1'b0),
-							.Clk(Clk),
+							.Clk(VGACLK),
 							.data_Out(Chardata_Out)
 						);
 
@@ -226,7 +221,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 							.write_address(19'd0),
 							.read_address(Gymread_address),
 							.we(1'b0),
-							.Clk(Clk),
+							.Clk(VGACLK),
 							.data_Out(Gymdata_Out)
 						);
 

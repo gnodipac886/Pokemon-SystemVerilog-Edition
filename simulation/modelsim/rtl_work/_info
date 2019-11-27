@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Eric/Desktop/Pokemon-SVE/simulation/modelsim
+vframeDrawer
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1574830969
+!i10b 1
+!s100 ]<:KUX6acX0HZ4TB:Blk71
+I7Ua:ediWQ69@LeI?>8z<:0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 framebuffer_sv_unit
+S1
+R0
+w1574830950
+8C:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv
+FC:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1574830969.000000
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE|C:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE
+Z8 tCvgOpt 0
+nframe@drawer
+vgameFSM
+R1
+R2
+!i10b 1
+!s100 f;MQfP]68H`EkgB959WH03
+IWZ4;GXMT`8^C[ZTQc_jke1
+R3
+!s105 gameFSM_sv_unit
+S1
+R0
+w1574826660
+8C:/Users/Eric/Desktop/Pokemon-SVE/gameFSM.sv
+FC:/Users/Eric/Desktop/Pokemon-SVE/gameFSM.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/gameFSM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE|C:/Users/Eric/Desktop/Pokemon-SVE/gameFSM.sv|
+!i113 1
+R6
+R7
+R8
+ngame@f@s@m
+vlab8
+R1
+R2
+!i10b 1
+!s100 k`j>>cG_7`zQZ013Zg@Me2
+I7^ZX>kF]oSMOi:]NkdJF03
+R3
+!s105 lab8_sv_unit
+S1
+R0
+w1574728246
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8.sv
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8.sv
+L0 16
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE|C:/Users/Eric/Desktop/Pokemon-SVE/lab8.sv|
+!i113 1
+R6
+R7
+R8
+vvga_clk
+Z9 !s110 1574830967
+!i10b 1
+!s100 OGlLO8;N^^k^>BA7[_bgn1
+I]D81=oO^<BIKnKOh1kl6m0
+R3
+R0
+w1573772843
+8C:/Users/Eric/Desktop/Pokemon-SVE/vga_clk.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/vga_clk.v
+L0 40
+R4
+r1
+!s85 0
+31
+Z10 !s108 1574830967.000000
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/vga_clk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE|C:/Users/Eric/Desktop/Pokemon-SVE/vga_clk.v|
+!i113 1
+Z11 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE
+R8
+vvga_clk_altpll
+R9
+!i10b 1
+!s100 M:z4m=8?iG0fP6=5PXSTl1
+IVTL@Bb7X1DB[;nZX=m_OS2
+R3
+R0
+w1573774492
+8C:/Users/Eric/Desktop/Pokemon-SVE/db/vga_clk_altpll.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/db/vga_clk_altpll.v
+L0 29
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/db/vga_clk_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/db|C:/Users/Eric/Desktop/Pokemon-SVE/db/vga_clk_altpll.v|
+!i113 1
+R11
+!s92 -vlog01compat -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE/db
+R8
+vVGA_controller
+R1
+R2
+!i10b 1
+!s100 iZ^ZkeRFZV@Tdc684OR@G2
+ICazWEDKZ8]?<M^Zj^k9;P1
+R3
+!s105 VGA_controller_sv_unit
+S1
+R0
+w1573772838
+8C:/Users/Eric/Desktop/Pokemon-SVE/VGA_controller.sv
+FC:/Users/Eric/Desktop/Pokemon-SVE/VGA_controller.sv
+L0 26
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/VGA_controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE|C:/Users/Eric/Desktop/Pokemon-SVE/VGA_controller.sv|
+!i113 1
+R6
+R7
+R8
+n@v@g@a_controller

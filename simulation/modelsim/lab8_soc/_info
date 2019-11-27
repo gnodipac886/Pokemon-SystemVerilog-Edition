@@ -1,0 +1,1088 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Eric/Desktop/Pokemon-SVE/simulation/modelsim
+valtera_avalon_sc_fifo
+Z1 !s110 1574830968
+!i10b 1
+!s100 4mK@em][G=j]om3zJIhOc0
+I?BJQ_6NVB<;cd0]Ye_EEZ0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1574213792
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_avalon_sc_fifo.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_avalon_sc_fifo.v
+Z3 L0 21
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1574830968.000000
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_avalon_sc_fifo.v|
+!i113 1
+Z6 o-vlog01compat -work lab8_soc
+Z7 !s92 -vlog01compat -work lab8_soc +incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules
+Z8 tCvgOpt 0
+valtera_reset_controller
+R1
+!i10b 1
+!s100 z[H_hRO9gO=:^2E3_jWH03
+I2mMbZi4YHoZfYX^C7hXZf0
+R2
+R0
+Z9 w1574213783
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_reset_controller.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_reset_controller.v
+L0 42
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_reset_controller.v|
+!i113 1
+R6
+R7
+R8
+valtera_reset_synchronizer
+R1
+!i10b 1
+!s100 oWLYmSO[EOX[G0PgQhZ2=0
+I?TgHAzk@ZQS`bb@:z@6=^2
+R2
+R0
+R9
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_reset_synchronizer.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_reset_synchronizer.v
+L0 24
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/altera_reset_synchronizer.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc
+R1
+!i10b 1
+!s100 BRED250iMbO=JEQab_inB0
+If9W0c^P=l7CEn6J^mXUj_3
+R2
+R0
+w1574213734
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/lab8_soc.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/lab8_soc.v
+L0 6
+R4
+r1
+!s85 0
+31
+!s108 1574830967.000000
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/lab8_soc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/lab8_soc.v|
+!i113 1
+R6
+!s92 -vlog01compat -work lab8_soc +incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis
+R8
+vlab8_soc_jtag_uart_0
+Z10 !s110 1574830969
+!i10b 1
+!s100 CJD0]eXeSmcnXQ;?1M<3A3
+IklB^9:ecPfWYBU3QYl2Z22
+R2
+R0
+Z11 w1574213736
+Z12 8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_jtag_uart_0.v
+Z13 FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_jtag_uart_0.v
+L0 331
+R4
+r1
+!s85 0
+31
+Z14 !s108 1574830969.000000
+Z15 !s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_jtag_uart_0.v|
+Z16 !s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_jtag_uart_0.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_jtag_uart_0_scfifo_r
+R10
+!i10b 1
+!s100 1JieNa4U<MLDYYDbQnHSj2
+Icd`]5@mD8j<S]VT>DM`2=1
+R2
+R0
+R11
+R12
+R13
+L0 243
+R4
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vlab8_soc_jtag_uart_0_scfifo_w
+R10
+!i10b 1
+!s100 NNb8EMJSGOko@R;K4kk_O0
+I@1E0Vb;U4oF8;Czg3:AU50
+R2
+R0
+R11
+R12
+R13
+L0 78
+R4
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vlab8_soc_jtag_uart_0_sim_scfifo_r
+R10
+!i10b 1
+!s100 5Q7e8R]@WIeVZ<GoMU05G3
+I@`oW31F2HaR]8kHI2LGGl0
+R2
+R0
+R11
+R12
+R13
+L0 164
+R4
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vlab8_soc_jtag_uart_0_sim_scfifo_w
+R10
+!i10b 1
+!s100 IO6zCmT:c8O>BX_UZa[9k2
+IQYc456oH9E<n3zKj@UShQ0
+R2
+R0
+R11
+R12
+R13
+R3
+R4
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vlab8_soc_keycode
+R10
+!i10b 1
+!s100 h]hj8TnR5o?bFfPIlT@4o2
+I_Q?;dUg`bLn^FaCLfT5og3
+R2
+R0
+w1574213737
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_keycode.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_keycode.v
+R3
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_keycode.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_keycode.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_mm_interconnect_0
+R1
+!i10b 1
+!s100 fo2WHzGi6B8c=l?7U27C[3
+IkZ>fA8=YCl61N^=k:`Ih;0
+R2
+R0
+w1574213782
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0.v
+L0 9
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_mm_interconnect_0_avalon_st_adapter
+R1
+!i10b 1
+!s100 43o2z_MeJJ_gDmMW?:a5n0
+I;2==VZVQ58ZNKzWGI;kk71
+R2
+R0
+w1574213794
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter.v
+L0 9
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0
+R10
+!i10b 1
+!s100 ?EHKUa<Si2hKCm839UD771
+IVB0N<[PhnLd]iBEP;hZHR0
+R2
+R0
+w1574213738
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0.v
+L0 9
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu
+R10
+!i10b 1
+!s100 6d<@J?W=HfJ3BX2FW4NYN0
+IafP:?PMV9mR6B[^Q82P_G2
+R2
+R0
+Z17 w1574213791
+Z18 8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.v
+Z19 FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.v
+L0 2834
+R4
+r1
+!s85 0
+31
+R14
+Z20 !s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.v|
+Z21 !s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_debug_slave_sysclk
+R10
+!i10b 1
+!s100 =V@534MnblH3?Wjal1U5i1
+IUbfF009dc?@[;R^HA<7cU2
+R2
+R0
+R17
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v
+R3
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_debug_slave_tck
+R10
+!i10b 1
+!s100 VcFB42X2z5bWg>>MOb42^1
+IRNKJOb^NNcl<Wf;DFfjfa1
+R2
+R0
+R17
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_tck.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_tck.v
+R3
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_tck.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_tck.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper
+R10
+!i10b 1
+!s100 okUV`814ADld@?k8f7A<F2
+IogfO9]bEaIO@>FN3f2D[A0
+R2
+R0
+R17
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v
+R3
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_avalon_reg
+R10
+!i10b 1
+!s100 ASo>N:WjCP<_4PZnz37]>0
+IjBIhBKiKk`GWOnMGahP?M0
+R2
+R0
+R17
+R18
+R19
+L0 2023
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci
+R10
+!i10b 1
+!s100 zWQhG62gf^@f`T8Fb15iB0
+I`f4Y8m?zSlYQ_@WEAXR1W3
+R2
+R0
+R17
+R18
+R19
+L0 2362
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_break
+R10
+!i10b 1
+!s100 PDcWM`[4?A1U^N;Nl?SY13
+IkEQjij9YfS>^YL6H_l@3J0
+R2
+R0
+R17
+R18
+R19
+L0 295
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
+R10
+!i10b 1
+!s100 11HDo7@=CNO0?>DmSO[TI2
+IYeGT:=V8WTL8Icb04X=Oa3
+R2
+R0
+R17
+R18
+R19
+L0 1265
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_dbrk
+R10
+!i10b 1
+!s100 @X<zbgN?kz6o1Ui@0MZmA0
+Ihzd>7fEz;HTHlD1A_1n]a2
+R2
+R0
+R17
+R18
+R19
+L0 795
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_debug
+R10
+!i10b 1
+!s100 JlG_HZoVJOJ2H_@<2Af9a1
+I<gk?8zYU:GU@jAE6_@QLd3
+R2
+R0
+R17
+R18
+R19
+L0 153
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_dtrace
+R10
+!i10b 1
+!s100 R8n1j@nFZin3jc]g]1ELE2
+I;OHU;JY6EHWX[QNLY:f=B1
+R2
+R0
+R17
+R18
+R19
+L0 1183
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_fifo
+R10
+!i10b 1
+!s100 zjFVdH0YTV59YVK7fAPHg1
+I`j`=1;fKHgHXXCokHMiJR0
+R2
+R0
+R17
+R18
+R19
+L0 1427
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
+R10
+!i10b 1
+!s100 93Fo?na5dAom5mMU@<dC<3
+I5m9Rb;M=:MDDEmcFiXjZI2
+R2
+R0
+R17
+R18
+R19
+L0 1380
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
+R10
+!i10b 1
+!s100 VO6lNZP[P@^BTVQjVM]TL3
+ICF<CJ@o0]i?gHD@AjkHXc1
+R2
+R0
+R17
+R18
+R19
+L0 1337
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_im
+R10
+!i10b 1
+!s100 b0Lg?48[Y^Yf54fJzLLXV3
+Idne^NBKJkHCa1?S3<HYzJ0
+R2
+R0
+R17
+R18
+R19
+L0 1936
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_itrace
+R10
+!i10b 1
+!s100 DlahG`KLUggk[_MMQSzco0
+IjjC^4>AQQEP8P4fQ?7fjk2
+R2
+R0
+R17
+R18
+R19
+L0 982
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_pib
+R10
+!i10b 1
+!s100 ImGl^4OMLZ8>2mZn;=88a1
+I5>Bc7`lfYhLkoLcPK43Am2
+R2
+R0
+R17
+R18
+R19
+L0 1913
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_td_mode
+R10
+!i10b 1
+!s100 <?W[k7NA`M0MjZDUFoWn82
+I`mlLUCgdUPQW2eo83AaEb0
+R2
+R0
+R17
+R18
+R19
+L0 1115
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_oci_xbrk
+R10
+!i10b 1
+!s100 Q]m]<V:^EkLJ3T^[z@Qfg0
+ILzeZW=]]b5eSB70Z5NfDd2
+R2
+R0
+R17
+R18
+R19
+L0 588
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_ocimem
+R10
+!i10b 1
+!s100 45CE20T9zRk6hSnf7RA@W1
+IA[ZKWEQW8V8=6a52>i8=X0
+R2
+R0
+R17
+R18
+R19
+L0 2181
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_nios2_performance_monitors
+R10
+!i10b 1
+!s100 eJN?h=AAR[K_oc?53LX>`2
+IVBlYLl3;<JaLTQ39FgA0S2
+R2
+R0
+R17
+R18
+R19
+L0 2006
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_ociram_sp_ram_module
+R10
+!i10b 1
+!s100 d@kdJEYnIMNh6_P[=@W^C1
+Iechza@^k>`a[M=Mdje3lU0
+R2
+R0
+R17
+R18
+R19
+L0 2116
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_register_bank_a_module
+R10
+!i10b 1
+!s100 UU<z07X7oZ0mh?QR@on]@2
+IzYjIJjh6DRRNhRd]Bhab91
+R2
+R0
+R17
+R18
+R19
+R3
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_register_bank_b_module
+R10
+!i10b 1
+!s100 nfP;fCFKFa7Y6Wn5DzJVL3
+INCF`;SQ2=]jQM_Pe3T0Ge2
+R2
+R0
+R17
+R18
+R19
+L0 87
+R4
+r1
+!s85 0
+31
+R14
+R20
+R21
+!i113 1
+R6
+R7
+R8
+vlab8_soc_nios2_gen2_0_cpu_test_bench
+R10
+!i10b 1
+!s100 ZI3;Ah>cBlWWRK21`GL2X3
+IEkh=59`YU9mDij=PbdlG:1
+R2
+R0
+R17
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_test_bench.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_test_bench.v
+R3
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_test_bench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_test_bench.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_onchip_memory2_0
+R1
+!i10b 1
+!s100 8c05kY>4EdQOGJS3g]Mcf1
+Im8mYeUN7^FA0A3TO:=`Ok3
+R2
+R0
+w1574213739
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_onchip_memory2_0.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_onchip_memory2_0.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_onchip_memory2_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_onchip_memory2_0.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_otg_hpi_address
+R1
+!i10b 1
+!s100 =^Qo8^2bHK]UA_[TLQ>hW0
+I:O:GbDUaY^9Qe>zIZPj>M1
+R2
+R0
+Z22 w1574213740
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_address.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_address.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_address.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_address.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_otg_hpi_cs
+R1
+!i10b 1
+!s100 F1P?R^?amheSNULcE?YZ12
+I2I2VJZ`4aldi;HhT41j`d2
+R2
+R0
+R22
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_cs.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_cs.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_cs.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_cs.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_otg_hpi_data
+R1
+!i10b 1
+!s100 QzTP]9nLQa::f]mG?Q>o72
+ID[g1?UWM95D1zU;UXPBMm3
+R2
+R0
+Z23 w1574213741
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_data.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_data.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_data.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_data.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_sdram
+R1
+!i10b 1
+!s100 ^RC^j>RgM<ofj6<FK]h_61
+InO:`fVX9EBZ6SU:iiFUi71
+R2
+R0
+R23
+Z24 8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sdram.v
+Z25 FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sdram.v
+L0 159
+R4
+r1
+!s85 0
+31
+R5
+Z26 !s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sdram.v|
+Z27 !s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sdram.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_sdram_input_efifo_module
+R1
+!i10b 1
+!s100 Y1XXF5<:BFeA_NYNio[nB1
+IZ4R22X1]>3XogiiP1ZTzW3
+R2
+R0
+R23
+R24
+R25
+R3
+R4
+r1
+!s85 0
+31
+R5
+R26
+R27
+!i113 1
+R6
+R7
+R8
+vlab8_soc_sdram_pll
+R1
+!i10b 1
+!s100 7J;I0:z0_geTPJ:dYK;7U1
+I5KOY<c>cCzSf>3PeASD]b2
+R2
+R0
+Z28 w1574213744
+Z29 8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sdram_pll.v
+Z30 FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sdram_pll.v
+L0 217
+R4
+r1
+!s85 0
+31
+R5
+Z31 !s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sdram_pll.v|
+Z32 !s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sdram_pll.v|
+!i113 1
+R6
+R7
+R8
+vlab8_soc_sdram_pll_altpll_lqa2
+R1
+!i10b 1
+!s100 Fd[VWiQ=W=[^6=;8UE2SR1
+IEl6mSi^=UkRL<]8VHoe^f3
+R2
+R0
+R28
+R29
+R30
+L0 130
+R4
+r1
+!s85 0
+31
+R5
+R31
+R32
+!i113 1
+R6
+R7
+R8
+vlab8_soc_sdram_pll_dffpipe_l2c
+R1
+!i10b 1
+!s100 c2HQOQc8<L_zjg3U_UKon3
+I^QUF4o8:jI1:E4L9eaZMc0
+R2
+R0
+R28
+R29
+R30
+L0 37
+R4
+r1
+!s85 0
+31
+R5
+R31
+R32
+!i113 1
+R6
+R7
+R8
+vlab8_soc_sdram_pll_stdsync_sv6
+R1
+!i10b 1
+!s100 N]=W[n<M4Thj2;n5A@fH;1
+IjAG8B@PzfEFLd9FY4R?ST3
+R2
+R0
+R28
+R29
+R30
+L0 98
+R4
+r1
+!s85 0
+31
+R5
+R31
+R32
+!i113 1
+R6
+R7
+R8
+vlab8_soc_sysid_qsys_0
+R1
+!i10b 1
+!s100 IUn2U3zzMOFSeY@RImAjB2
+IR`mFQ??XiY19h@mRaAUQe0
+R2
+R0
+R28
+8C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sysid_qsys_0.v
+FC:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sysid_qsys_0.v
+L0 34
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sysid_qsys_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|lab8_soc|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules|C:/Users/Eric/Desktop/Pokemon-SVE/lab8_soc/synthesis/submodules/lab8_soc_sysid_qsys_0.v|
+!i113 1
+R6
+R7
+R8

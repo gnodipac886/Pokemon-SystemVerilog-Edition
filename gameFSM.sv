@@ -72,7 +72,7 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 					next_state 	= 	draw_main_game;
 				end 
 			draw_main_game 		:
-				if(keycode == 8'h1B) begin
+				if(keycode == 8'h29) begin
 					next_state 	=	start_screen;
 				end
 			hold 				: 	;
