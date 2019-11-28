@@ -248,7 +248,7 @@ module gymBoundsChecker	(	input 	logic 	[1:0]	direction,
 		atBounds 	=	1'b0;
 		unique case (direction)
 			2'd0 	:	begin	//down
-							if(y == 107 || y == 235 || y == 368) begin
+							if(y == 107 || y == 235 || y == 367) begin
 								atBounds 	= 	1'b1;
 							end
 							else if(x < 219 && x > 244 && y == 363) begin
@@ -257,19 +257,19 @@ module gymBoundsChecker	(	input 	logic 	[1:0]	direction,
 						end 
 
 			2'd1 	:	begin	//up
-							if() begin
+							if(y == 283 || y == 155 || y == 27) begin
 								atBounds 	= 	1'b1;
 							end 
 						end 
 
 			2'd2 	:	begin
-							if() begin
+							if(x == 160 || x == 320 || x == 480) begin
 								atBounds 	= 	1'b1;
 							end 
 						end 
 
 			2'd3 	:	begin
-							if() begin
+							if(x == 128 || x == 288 || x == 448) begin
 								atBounds 	= 	1'b1;
 							end 
 						end 
