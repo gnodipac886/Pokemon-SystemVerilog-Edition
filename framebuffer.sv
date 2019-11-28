@@ -45,7 +45,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 
 	assign 			charxgymstartpos 	= 	9'd224;		//these are the starting x and y positions for the character
 	assign			charygymstartpos 	= 	9'd362;		//these tell you the top left point of the character box
-	
+
 	always_comb begin
 		FBread_address 	= 	((DRAWY - 80) / 2) * 240 + ((DRAWX - 80) / 2);	//MAYBE DURING THE WRITING PROCESS OF THE NEXT PIXEL, WE NEED DIFFERENT ADDRESS
 		FBwrite_address	= 	(DRAWY - 80) * 240 + (DRAWX - 560);
@@ -228,3 +228,52 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 endmodule
 
 
+module gymBoundsChecker	(	input 	logic 	[1:0]	direction,
+							input 	logic 	[9:0]	charxcurrpos, charycurrpos, 
+							output 	logic			atBounds,
+							);
+	/*
+		direction map:
+			0: 	down
+			1:	up
+			2:	left
+			3:	right
+	*/
+
+	logic 	x, y;
+	assign 	x 	= 	charxcurrpos;
+	assign 	y 	= 	charycurrpos;
+
+	always_comb	begin
+		atBounds 	=	1'b0;
+		unique case (direction)
+			2'd0 	:	begin	//down
+							if(y == 107 || y == 235 || y == 368) begin
+								atBounds 	= 	1'b1;
+							end
+							else if(x < 219 && x > 244 && y == 363) begin
+								atBounds 	= 	1'b1;
+							end 
+						end 
+
+			2'd1 	:	begin	//up
+							if() begin
+								atBounds 	= 	1'b1;
+							end 
+						end 
+
+			2'd2 	:	begin
+							if() begin
+								atBounds 	= 	1'b1;
+							end 
+						end 
+
+			2'd3 	:	begin
+							if() begin
+								atBounds 	= 	1'b1;
+							end 
+						end 
+			default : ;
+		endcase
+	end 
+endmodule
