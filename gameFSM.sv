@@ -25,6 +25,7 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 	*/
 
 	logic 	[1:0]	next_direction;
+	logic 	[4:0]	tilecounter, next_tilecounter;
 	logic 	[5:0]	charFrameCounter, next_charFrameCounter;
 	logic 	[5:0] 	fade_counter, fade_counter_next;
 	logic 	[7:0] 	W 	= 	8'h1A;
@@ -40,13 +41,15 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 			state 			<= 	start_screen;
 			fade_counter 	<= 	6'd0;
 			direction 		<= 	2'd0;
-			charFrameCounter<= 	5'd0; 	
+			charFrameCounter<= 	6'd0; 
+			tilecounter 	<= 	5'd0;	
 		end 
 		else begin
 			state 			<= 	next_state;
 			fade_counter 	<= 	fade_counter_next;
 			direction 		<= 	next_direction;
 			charFrameCounter<= 	next_charFrameCounter;
+			tilecounter 	<= 	next_tilecounter;
 		end 
 	end 
 
@@ -87,7 +90,7 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 		charIsRunning			= 	1'b0;
 		charMoveFrame			= 	2'b00;
 		state_num 				= 	4'b0000;
-		
+		next_tilecounter 		= 	tilecounter;
 		case (state) 
 			start_screen		: 	;
 
@@ -109,29 +112,81 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 			draw_main_game 		: //NEED TO IMPLEMENT RUNNING
 				begin
 					state_num 	= 	4'd3;
-					if(keycode == S) begin
-						next_direction 			= 	2'd0;
+					if (tilecounter != 5'd31) begin		//doing this for the character to walk in blocks of 16
+						next_direction			= 	direction;
 						charIsMoving 			= 	1'b1;
-						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
-					end 
-					else if(keycode == W) begin
-						next_direction 			= 	2'd1;
-						charIsMoving 			= 	1'b1;
-						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
-					end 
-					else if(keycode == A) begin
-						next_direction 			= 	2'd2;
-						charIsMoving 			= 	1'b1;
-						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
-					end 
-					else if(keycode == D) begin
-						next_direction 			= 	2'd3;
-						charIsMoving 			= 	1'b1;
-						charIsRunning			= 	1'b0;
-						next_charFrameCounter 	= 	charFrameCounter + 5'd1;
+						next_charFrameCounter 	= 	charFrameCounter + 6'd1;
+						next_tilecounter 		= 	tilecounter + 5'd1;
+					end
+					else begin
+						next_tilecounter 		= 	5'd0;
+						unique case (keycode)
+							S 		: 	begin
+											if(direction == 2'd0) begin
+												next_direction 			= 	direction;
+												charIsMoving 			= 	1'b1;
+												charIsRunning			= 	1'b0;
+												next_charFrameCounter 	= 	charFrameCounter + 6'd1;
+											end 
+											else begin
+												next_direction 			= 	2'd0;
+												charIsMoving 			= 	1'b0;
+												charIsRunning			= 	1'b0;
+												next_charFrameCounter 	= 	6'd0;
+												next_tilecounter 		= 	5'd31;
+											end 
+										end 
+
+							W 		: 	begin
+											if(direction == 2'd1) begin
+												next_direction 			= 	direction;
+												charIsMoving 			= 	1'b1;
+												charIsRunning			= 	1'b0;
+												next_charFrameCounter 	= 	charFrameCounter + 6'd1;
+											end 
+											else begin
+												next_direction 			= 	2'd1;
+												charIsMoving 			= 	1'b0;
+												charIsRunning			= 	1'b0;
+												next_charFrameCounter 	= 	6'd0;
+												next_tilecounter 		= 	5'd31;
+											end 
+										end 
+
+							A 		: 	begin
+											if(direction == 2'd2) begin
+												next_direction 			= 	direction;
+												charIsMoving 			= 	1'b1;
+												charIsRunning			= 	1'b0;
+												next_charFrameCounter 	= 	charFrameCounter + 6'd1;
+											end 
+											else begin
+												next_direction 			= 	2'd2;
+												charIsMoving 			= 	1'b0;
+												charIsRunning			= 	1'b0;
+												next_charFrameCounter 	= 	6'd0;
+												next_tilecounter 		= 	5'd31;
+											end 
+										end 
+
+							D 		: 	begin
+											if(direction == 2'd3) begin
+												next_direction 			= 	direction;
+												charIsMoving 			= 	1'b1;
+												charIsRunning			= 	1'b0;
+												next_charFrameCounter 	= 	charFrameCounter + 6'd1;
+											end 
+											else begin
+												next_direction 			= 	2'd3;
+												charIsMoving 			= 	1'b0;
+												charIsRunning			= 	1'b0;
+												next_charFrameCounter 	= 	6'd0;
+												next_tilecounter 		= 	5'd31;
+											end 
+										end 
+
+							default : 	;
+						endcase // keycode
 					end 
 					if(charFrameCounter < 6'd10) begin
 						charMoveFrame = 2'd0;
@@ -154,3 +209,29 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 		endcase 
 	end 
 endmodule
+
+/*
+						if(keycode == S) begin
+							next_direction 			= 	2'd0;
+							charIsMoving 			= 	1'b1;
+							charIsRunning			= 	1'b0;
+							next_charFrameCounter 	= 	charFrameCounter + 6'd1;
+						end 
+						else if(keycode == W) begin
+							next_direction 			= 	2'd1;
+							charIsMoving 			= 	1'b1;
+							charIsRunning			= 	1'b0;
+							next_charFrameCounter 	= 	charFrameCounter + 6'd1;
+						end 
+						else if(keycode == A) begin
+							next_direction 			= 	2'd2;
+							charIsMoving 			= 	1'b1;
+							charIsRunning			= 	1'b0;
+							next_charFrameCounter 	= 	charFrameCounter + 6'd1;
+						end 
+						else if(keycode == D) begin
+							next_direction 			= 	2'd3;
+							charIsMoving 			= 	1'b1;
+							charIsRunning			= 	1'b0;
+							next_charFrameCounter 	= 	charFrameCounter + 6'd1;
+						end */

@@ -40,7 +40,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 	logic [9:0] 	charxgymstartpos,	charygymstartpos;
 	logic [9:0]		charxcurrpos, 		charycurrpos;
 	logic [9:0]		charxnextpos, 		charynextpos;
-	logic 			FBwe, 				Charwe;
+	logic 			FBwe, 				Charwe, 			atBounds;
 	logic 			everyotherframe, 	everyotherframe_next;
 
 	assign 			charxgymstartpos 	= 	9'd224;		//these are the starting x and y positions for the character
@@ -65,7 +65,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 	end 
 
 	/*-------------------next pixel logic--------------------*/
-	always_ff @ (posedge VGACLK) begin
+	always_ff @ (posedge Clk) begin
 		if(DRAWX > 10'd79 && DRAWX < 10'd560 && DRAWY > 10'd79 && DRAWY < 10'd400) begin
 		// if(DRAWX >= 10'd0 && DRAWX < 10'd320 && DRAWY >= 10'd0 && DRAWY < 10'd240) begin
 			FBwe 			<= 	1'b0;
@@ -123,7 +123,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 								next_pixel 	= 	24'h000000;
 							end
 							//calculate how much to move
-							if(charIsMoving) begin
+							if(charIsMoving && ~atBounds) begin
 								unique case (direction)	//tile size is 16x16
 									2'd0 		: 	begin	//down
 														if (everyotherframe) begin
@@ -201,11 +201,17 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 		endcase
 	end 
 
+	gymBoundsChecker gyminstance(	.direction(direction), 
+									.charxcurrpos(charxcurrpos),
+									.charycurrpos(charycurrpos),
+									.atBounds(atBounds)
+									);
+
 	FramebufferRam FBRam(	.data_In(FBdata_In),
 							.write_address(FBwrite_address),
 							.read_address(FBread_address),
 							.we(FBwe),
-							.Clk(VGACLK), //if any error CHECK HERE!!!!!!!!!!!!!!!!!!!!!
+							.Clk(Clk), //if any error CHECK HERE!!!!!!!!!!!!!!!!!!!!!
 							.data_Out(FBdata_Out)
 						);
 
@@ -213,7 +219,7 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 							.write_address(19'd0),
 							.read_address(Charread_address),
 							.we(1'b0),
-							.Clk(VGACLK),
+							.Clk(Clk),
 							.data_Out(Chardata_Out)
 						);
 
@@ -221,59 +227,9 @@ module frameDrawer(	input 	logic 			Clk, VGACLK, VGA_VS, DrawEn, Reset,
 							.write_address(19'd0),
 							.read_address(Gymread_address),
 							.we(1'b0),
-							.Clk(VGACLK),
+							.Clk(Clk),
 							.data_Out(Gymdata_Out)
 						);
 
 endmodule
 
-
-module gymBoundsChecker	(	input 	logic 	[1:0]	direction,
-							input 	logic 	[9:0]	charxcurrpos, charycurrpos, 
-							output 	logic			atBounds,
-							);
-	/*
-		direction map:
-			0: 	down
-			1:	up
-			2:	left
-			3:	right
-	*/
-
-	logic 	x, y;
-	assign 	x 	= 	charxcurrpos;
-	assign 	y 	= 	charycurrpos;
-
-	always_comb	begin
-		atBounds 	=	1'b0;
-		unique case (direction)
-			2'd0 	:	begin	//down
-							if(y == 107 || y == 235 || y == 367) begin
-								atBounds 	= 	1'b1;
-							end
-							else if(x < 219 && x > 244 && y == 363) begin
-								atBounds 	= 	1'b1;
-							end 
-						end 
-
-			2'd1 	:	begin	//up
-							if(y == 283 || y == 155 || y == 27) begin
-								atBounds 	= 	1'b1;
-							end 
-						end 
-
-			2'd2 	:	begin
-							if(x == 160 || x == 320 || x == 480) begin
-								atBounds 	= 	1'b1;
-							end 
-						end 
-
-			2'd3 	:	begin
-							if(x == 128 || x == 288 || x == 448) begin
-								atBounds 	= 	1'b1;
-							end 
-						end 
-			default : ;
-		endcase
-	end 
-endmodule

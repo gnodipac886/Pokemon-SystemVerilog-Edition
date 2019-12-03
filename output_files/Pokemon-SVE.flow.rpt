@@ -1,5 +1,5 @@
 Flow report for Pokemon-SVE
-Tue Nov 26 20:43:49 2019
+Mon Dec 02 12:38:28 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 26 20:43:49 2019       ;
+; Flow Status                        ; Successful - Mon Dec 02 12:38:28 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Pokemon-SVE                                 ;
 ; Top-level Entity Name              ; lab8                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 33,761 / 114,480 ( 29 % )                   ;
-;     Total combinational functions  ; 33,127 / 114,480 ( 29 % )                   ;
-;     Dedicated logic registers      ; 2,156 / 114,480 ( 2 % )                     ;
-; Total registers                    ; 2275                                        ;
+; Total logic elements               ; 33,831 / 114,480 ( 30 % )                   ;
+;     Total combinational functions  ; 33,161 / 114,480 ( 29 % )                   ;
+;     Dedicated logic registers      ; 2,161 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 2280                                        ;
 ; Total pins                         ; 128 / 529 ( 24 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 935,776 / 3,981,312 ( 24 % )                ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/26/2019 20:20:49 ;
+; Start date & time ; 12/02/2019 11:36:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Pokemon-SVE         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
 ; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name     ; Section Id     ;
 +-------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 61811222300825.157482844914120                             ; --            ; --              ; --             ;
+; COMPILER_SIGNATURE_ID               ; 61811222300825.157530819110304                             ; --            ; --              ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                          ; --            ; --              ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)                            ; <None>        ; --              ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                       ; --            ; --              ; eda_simulation ;
@@ -107,12 +107,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:13:03     ; 1.0                     ; 5269 MB             ; 00:13:25                           ;
-; Fitter               ; 00:08:44     ; 1.1                     ; 6280 MB             ; 00:13:26                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4802 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:22     ; 2.0                     ; 5345 MB             ; 00:00:29                           ;
-; EDA Netlist Writer   ; 00:00:30     ; 1.0                     ; 5056 MB             ; 00:00:27                           ;
-; Total                ; 00:22:43     ; --                      ; --                  ; 00:27:52                           ;
+; Analysis & Synthesis ; 00:33:36     ; 1.0                     ; 5244 MB             ; 00:28:18                           ;
+; Fitter               ; 00:26:13     ; 1.0                     ; 6188 MB             ; 00:33:31                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4787 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:39     ; 2.0                     ; 5312 MB             ; 00:00:48                           ;
+; EDA Netlist Writer   ; 00:00:50     ; 1.0                     ; 5055 MB             ; 00:00:40                           ;
+; Total                ; 01:01:26     ; --                      ; --                  ; 01:03:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
