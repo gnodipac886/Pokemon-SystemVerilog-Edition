@@ -40,9 +40,9 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 			//state 			<= 	start_screen;
 			state 			<= 	start_screen;
 			fade_counter 	<= 	6'd0;
-			direction 		<= 	2'd0;
+			direction 		<= 	2'd1;
 			charFrameCounter<= 	6'd0; 
-			tilecounter 	<= 	5'd0;	
+			tilecounter 	<= 	5'd31;	
 		end 
 		else begin
 			state 			<= 	next_state;
@@ -119,10 +119,11 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 						next_tilecounter 		= 	tilecounter + 5'd1;
 					end
 					else begin
-						next_tilecounter 		= 	5'd0;
+						next_tilecounter 		= 	5'd31;
 						unique case (keycode)
 							S 		: 	begin
 											if(direction == 2'd0) begin
+												next_tilecounter 		= 	5'd0;
 												next_direction 			= 	direction;
 												charIsMoving 			= 	1'b1;
 												charIsRunning			= 	1'b0;
@@ -139,6 +140,7 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 
 							W 		: 	begin
 											if(direction == 2'd1) begin
+												next_tilecounter 		= 	5'd0;
 												next_direction 			= 	direction;
 												charIsMoving 			= 	1'b1;
 												charIsRunning			= 	1'b0;
@@ -155,6 +157,7 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 
 							A 		: 	begin
 											if(direction == 2'd2) begin
+												next_tilecounter 		= 	5'd0;
 												next_direction 			= 	direction;
 												charIsMoving 			= 	1'b1;
 												charIsRunning			= 	1'b0;
@@ -171,6 +174,7 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 
 							D 		: 	begin
 											if(direction == 2'd3) begin
+												next_tilecounter 		= 	5'd0;
 												next_direction 			= 	direction;
 												charIsMoving 			= 	1'b1;
 												charIsRunning			= 	1'b0;
