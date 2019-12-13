@@ -1,7 +1,8 @@
 module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 				input 	logic 	[7:0] 	keycode,
 				input 	logic 	[9:0] 	DRAWX, 	DRAWY,
-				output 	logic 			charIsMoving, charIsRunning,
+				input 	logic 			charIsRunning,
+				output 	logic 			charIsMoving, PLAY,
 				output	logic 	[1:0]	direction, charMoveFrame,
 				output 	logic 	[3:0]	state_num
 				);
@@ -87,10 +88,10 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 		next_charFrameCounter 	= 	charFrameCounter;
 		next_direction			= 	direction;
 		charIsMoving 			= 	1'b0;
-		charIsRunning			= 	1'b0;
 		charMoveFrame			= 	2'b00;
 		state_num 				= 	4'b0000;
 		next_tilecounter 		= 	tilecounter;
+		PLAY 					= 	1'b1;
 		case (state) 
 			start_screen		: 	;
 
@@ -126,13 +127,11 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 												next_tilecounter 		= 	5'd0;
 												next_direction 			= 	direction;
 												charIsMoving 			= 	1'b1;
-												charIsRunning			= 	1'b0;
 												next_charFrameCounter 	= 	charFrameCounter + 6'd1;
 											end 
 											else begin
 												next_direction 			= 	2'd0;
 												charIsMoving 			= 	1'b0;
-												charIsRunning			= 	1'b0;
 												next_charFrameCounter 	= 	6'd0;
 												next_tilecounter 		= 	5'd31;
 											end 
@@ -143,13 +142,11 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 												next_tilecounter 		= 	5'd0;
 												next_direction 			= 	direction;
 												charIsMoving 			= 	1'b1;
-												charIsRunning			= 	1'b0;
 												next_charFrameCounter 	= 	charFrameCounter + 6'd1;
 											end 
 											else begin
 												next_direction 			= 	2'd1;
 												charIsMoving 			= 	1'b0;
-												charIsRunning			= 	1'b0;
 												next_charFrameCounter 	= 	6'd0;
 												next_tilecounter 		= 	5'd31;
 											end 
@@ -160,13 +157,11 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 												next_tilecounter 		= 	5'd0;
 												next_direction 			= 	direction;
 												charIsMoving 			= 	1'b1;
-												charIsRunning			= 	1'b0;
 												next_charFrameCounter 	= 	charFrameCounter + 6'd1;
 											end 
 											else begin
 												next_direction 			= 	2'd2;
 												charIsMoving 			= 	1'b0;
-												charIsRunning			= 	1'b0;
 												next_charFrameCounter 	= 	6'd0;
 												next_tilecounter 		= 	5'd31;
 											end 
@@ -177,13 +172,11 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 												next_tilecounter 		= 	5'd0;
 												next_direction 			= 	direction;
 												charIsMoving 			= 	1'b1;
-												charIsRunning			= 	1'b0;
 												next_charFrameCounter 	= 	charFrameCounter + 6'd1;
 											end 
 											else begin
 												next_direction 			= 	2'd3;
 												charIsMoving 			= 	1'b0;
-												charIsRunning			= 	1'b0;
 												next_charFrameCounter 	= 	6'd0;
 												next_tilecounter 		= 	5'd31;
 											end 
@@ -213,29 +206,3 @@ module gameFSM(	input 	logic 			Clk, VGACLK, VGA_VS, Reset,
 		endcase 
 	end 
 endmodule
-
-/*
-						if(keycode == S) begin
-							next_direction 			= 	2'd0;
-							charIsMoving 			= 	1'b1;
-							charIsRunning			= 	1'b0;
-							next_charFrameCounter 	= 	charFrameCounter + 6'd1;
-						end 
-						else if(keycode == W) begin
-							next_direction 			= 	2'd1;
-							charIsMoving 			= 	1'b1;
-							charIsRunning			= 	1'b0;
-							next_charFrameCounter 	= 	charFrameCounter + 6'd1;
-						end 
-						else if(keycode == A) begin
-							next_direction 			= 	2'd2;
-							charIsMoving 			= 	1'b1;
-							charIsRunning			= 	1'b0;
-							next_charFrameCounter 	= 	charFrameCounter + 6'd1;
-						end 
-						else if(keycode == D) begin
-							next_direction 			= 	2'd3;
-							charIsMoving 			= 	1'b1;
-							charIsRunning			= 	1'b0;
-							next_charFrameCounter 	= 	charFrameCounter + 6'd1;
-						end */

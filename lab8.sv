@@ -15,7 +15,7 @@
 
 module lab8( input               CLOCK_50,
              input        [3:0]  KEY,          //bit 0 is set up as Reset
-             output logic [6:0]  HEX0, HEX1,
+             output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7,
              // VGA Interface 
              output logic [7:0]  VGA_R,        //VGA Red
                                  VGA_G,        //VGA Green
@@ -43,18 +43,25 @@ module lab8( input               CLOCK_50,
                                  DRAM_CKE,     //SDRAM Clock Enable
                                  DRAM_WE_N,    //SDRAM Write Enable
                                  DRAM_CS_N,    //SDRAM Chip Select
-                                 DRAM_CLK      //SDRAM Clock
+                                 DRAM_CLK,      //SDRAM Clock
+             input logic 		 AUD_ADCDAT,
+			 output logic		 AUD_XCK,
+								 AUD_DACDAT,
+								 I2C_SDAT,
+								 I2C_SCLK,
+			 inout wire 		 AUD_BCLK,
+								 AUD_ADCLRCK,
+								 AUD_DACLRCK
                     );
     
     logic Reset_h, Reset_ball, Clk;
-    logic [7:0] keycode;
-    logic [9:0] DrawX, DrawY;
-    logic is_ball;
-    
+    logic 	[7:0] 	keycode;
+    logic 	[9:0] 	DrawX, DrawY;
+    logic 	[9:0]	charxcurrpos, charycurrpos;
+
     assign Clk = CLOCK_50;
     always_ff @ (posedge Clk) begin
         Reset_h <= ~(KEY[0]);        // The push buttons are active low
-        Reset_ball <= ~(KEY[1]);     // Reset the ball's position
     end
     
     logic [1:0] hpi_addr;
@@ -122,28 +129,21 @@ module lab8( input               CLOCK_50,
 											.DrawY(DrawY)
 											);
 
-	logic 			charIsMoving, charIsRunning;
+	logic 			charIsMoving;
 	logic 	[1:0]  	direction, charMoveFrame;
 	logic 	[3:0]	state_num;
-	logic 	[7:0]  	FBB, FBG, FBR;
-	/*test*/
-   	logic [3:0] teststate;
-   	always_comb begin
-   		teststate = 0;
-   		if(~KEY[2] && KEY[3])
-   			teststate = 2;
-   		if(~KEY[3] && KEY[2])
-   			teststate = 3;
-   	end 
 
+	logic 	[3:0]	testState;
+	assign 	testState = (~KEY[2]) 	?	4'd3 	: 	4'd0;
 
+	logic 	atTile;
    frameDrawer fdinstance(  .Clk(Clk), 
-							.VGACLK(VGA_CLK), 
+							.VGA_CLK(VGA_CLK), 
 							.VGA_VS(VGA_VS),
 							.DrawEn(1'b1),
 							.Reset(Reset_h),
 							.charIsMoving(charIsMoving), 
-							.charIsRunning(~KEY[2]), //change back!
+							.charIsRunning(~KEY[1]), //change back!
 							.direction(direction),
 							.charMoveFrame(charMoveFrame),
 							.state_num(state_num),
@@ -152,7 +152,10 @@ module lab8( input               CLOCK_50,
 							.keycode(keycode),
 							.R(VGA_R), 
 							.G(VGA_G), 
-							.B(VGA_B)
+							.B(VGA_B),
+							.charxcurrpos(charxcurrpos),
+							.charycurrpos(charycurrpos),
+							.atTile(atTile)
 							);
 
    gameFSM gameInstance(    .Clk(Clk),
@@ -163,38 +166,61 @@ module lab8( input               CLOCK_50,
 							.DRAWX(DrawX),
 							.DRAWY(DrawY),
 							.charIsMoving(charIsMoving),
-							.charIsRunning(charIsRunning),
+							.PLAY(PLAY),
+							.charIsRunning(~KEY[2]),
 							.direction(direction),
 							.charMoveFrame(charMoveFrame),
 							.state_num(state_num)
-							);
-    
-    // Which signal should be frame_clk?
-    /*ball ball_instance( .Clk(Clk),
-                        .Reset(Reset_ball),
-                        .frame_clk(VGA_VS),
-                        .keycode(keycode),
-                        .DrawX(DrawX),
-                        .DrawY(DrawY),
-                        .is_ball(is_ball)
-                        );
-    
-   color_mapper color_instance( .is_ball(is_ball),
-                                .DrawX(DrawX),
-                                .DrawY(DrawY),
-                                .VGA_R(VGA_R),
-                                .VGA_G(VGA_G),
-                                .VGA_B(VGA_B)
-                                );*/
-    
+							);    
+
+ //   Audio_Controller testaud(
+	// // Inputs
+	// .CLOCK_50(Clk),
+	// .reset(Reset_h),
+	// .left_channel_audio_out(LC),
+	// .right_channel_audio_out(RC),
+	// .write_audio_out(audio_out_allowed),
+	// .AUD_ADCDAT(AUD_ADCDAT),
+	// // Bidirectionals
+	// .AUD_BCLK(AUD_BCLK),
+	// .AUD_ADCLRCK(AUD_ADCLRCK),
+	// .AUD_DACLRCK(AUD_DACLRCK),
+	// .audio_out_allowed(audio_out_allowed),
+	// .AUD_XCK(AUD_XCK),
+	// .AUD_DACDAT(AUD_DACDAT)
+	// );
+
+ //   logic 	[15:0]	LC, RC;
+ //   logic 	[31:0]	test;
+ //   logic 			PLAY, audio_out_allowed;
+ //   tenseAudioRam tenseInst(.*);
+/*
+   logic 			INIT_FINISH, data_over, INIT;
+   logic 			RUN = 1'b1;
+   logic 	[15:0] 	LDATA, RDATA;
+   state_audio 	audiostateinst(.*, .LC(test), .RC(test));
+
+   audio_interface audio(LDATA, RDATA,	//:      IN std_logic_vector(15 downto 0); -- parallel external data inputs
+						Clk, Reset, INIT, //: IN std_logic; 
+						INIT_FINISH, //:				OUT std_logic;
+						adc_full, //:			OUT std_logic;
+						data_over, //:          OUT std_logic; -- sample sync pulse
+						AUD_XCK, //:             OUT std_logic; -- Codec master clock OUTPUT
+						AUD_BCLK, //:             IN std_logic; -- Digital Audio bit clock
+						AUD_ADCDAT, //:			IN std_logic;
+						AUD_DACDAT, //:           OUT std_logic; -- DAC data line
+						AUD_DACLRCK, AUD_ADCLRCK, //:          IN std_logic; -- DAC data left/right select
+						I2C_SDAT, //:             OUT std_logic; -- serial interface data line
+						I2C_SCLK, //:             OUT std_logic;  -- serial interface clock
+						ADCDATA); //: 				OUT std_logic_vector(31 downto 0))
+*/
     // Display keycode on hex display
-    HexDriver hex_inst_0 (keycode[3:0], HEX0);
-    HexDriver hex_inst_1 (keycode[7:4], HEX1);
-    
-    /**************************************************************************************
-        ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!
-        Hidden Question #1/2:
-        What are the advantages and/or disadvantages of using a USB interface over PS/2 interface to
-             connect to the keyboard? List any two.  Give an answer in your Post-Lab.
-    **************************************************************************************/
+    HexDriver hex_inst_0 ((charycurrpos % 10), HEX0);
+    HexDriver hex_inst_1 (((charycurrpos % 100) / 10), HEX1);
+    HexDriver hex_inst_2 ((charycurrpos / 100), HEX2);
+    HexDriver hex_inst_3 ((charxcurrpos % 10), HEX3);
+    HexDriver hex_inst_4 (((charxcurrpos % 100) / 10), HEX4);
+    HexDriver hex_inst_5 ((charxcurrpos / 100), HEX5);
+    HexDriver hex_inst_6 (atTile, HEX6);
+    HexDriver hex_inst_7 (keycode[7:4], HEX7);
 endmodule

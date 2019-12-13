@@ -1120,3 +1120,684 @@ Info: Building ../Pokemon-SVE_app_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
 [BSP build complete]
 [Pokemon-SVE_app build complete]
+17:54:26 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+17:54:29 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+17:54:43 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+18:03:14 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+19:18:50 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+19:18:52 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+19:19:01 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+19:20:25 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+19:20:26 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+19:20:35 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+12:37:45 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+12:37:48 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+12:38:03 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:18:34 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:18:35 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+20:18:43 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:19:01 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:19:03 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+20:19:10 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:19:35 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:19:37 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+20:19:44 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:20:35 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:20:37 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+20:20:45 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:31:22 **** Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:31:26 **** Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+21:31:39 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:32:02 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:32:04 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+21:32:10 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:32:58 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:33:00 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+21:33:10 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:33:41 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:33:42 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+21:33:48 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:34:26 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:34:28 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+21:34:34 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:35:32 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+21:35:34 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+21:35:50 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:16:49 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:16:51 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+20:18:06 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:19:27 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+20:19:28 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+20:19:39 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+03:24:42 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+03:24:46 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+03:25:02 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+03:45:33 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+03:45:34 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+03:45:43 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:16:16 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:16:18 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:17:50 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:26:56 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:27:38 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:27:39 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:27:46 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:28:47 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:28:48 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:28:53 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:29:41 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:29:42 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:29:47 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:32:17 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:32:18 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:32:24 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:33:54 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:33:55 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:33:59 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:38:38 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:38:39 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:38:47 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:38:48 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:38:54 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:51:58 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:51:59 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:52:04 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:52:20 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:52:21 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:52:26 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:53:09 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:53:10 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:53:23 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+14:53:24 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+14:53:28 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:07:37 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:07:38 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+15:07:45 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:26:32 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:26:33 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+15:26:38 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:36:46 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:36:47 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+15:36:59 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:37:27 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:37:28 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+15:37:33 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:38:15 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:38:16 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+15:38:22 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:45:27 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:45:28 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+15:45:34 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:55:49 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:55:51 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+15:55:56 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:56:13 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:56:50 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:56:52 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+15:56:57 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:57:18 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+15:57:19 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+15:57:26 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:27:32 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:27:33 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+16:27:39 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:30:16 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:30:17 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+16:30:24 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:32:37 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:32:38 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+16:32:43 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:33:44 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:33:45 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+16:33:50 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:34:58 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:34:59 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+16:35:05 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:54:47 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]
+16:54:48 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app_bsp ****
+make all 
+[BSP build complete]
+16:54:53 **** Incremental Build of configuration Nios II for project Pokemon-SVE_app ****
+make all 
+Info: Building ../Pokemon-SVE_app_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Pokemon-SVE_app_bsp/
+[BSP build complete]
+[Pokemon-SVE_app build complete]

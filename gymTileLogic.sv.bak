@@ -1,0 +1,176 @@
+module gymTileLogic (	input 	logic 			Clk, 		Reset,	//should be VGA_VS
+						input	logic	[9:0] 	xright, 	ybottom,
+						output 	logic 			atTile,
+						output 	logic 	[1:0] 	spin_direction,
+						output 	logic 	[9:0]	xleft_next,	ytop_next
+						);
+	//need a FSM here to make sure player doesn't glitch on tiles forever
+
+	/*
+		direction map:
+			0: 	down
+			1:	up
+			2:	left
+			3:	right
+	*/
+	enum 	logic [2:0] {notTile, prespin, teleport, postspin hold} state, next_state;
+
+	logic 			isOnTile;
+	logic 	[4:0] 	spinCounter, next_spinCounter;
+
+	logic 	[5:0]	[8:0]	X 	= 	{9'd15, 9'd143, 9'd207, 9'd271, 9'd335, 9'd463};
+	logic 	[5:0]	[8:0]	Y 	= 	{9'd79, 9'd127, 9'd207, 9'd255, 9'd335, 9'd383};
+	logic 			[8:0]	X35	=	9'd303;
+
+	logic 	[1:0]	[8:0]	AX 	= 	{{X35}, {X[5]}};	//rooms 8, 9 respectively
+	logic 	[1:0]	[8:0]	AY 	= 	{{Y[4]}, {Y[5]}};	//rooms 8, 9 respectively
+	logic 	[1:0]	[8:0]	BX 	= 	{{X[5]}, {X[5]}};	//rooms 6, 9 respectively
+	logic 	[1:0]	[8:0]	BY 	= 	{{Y[2]}, {Y[4]}};	//rooms 6, 9 respectively
+	logic 	[1:0]	[8:0]	CX 	= 	{{X[5]}, {X[4]}};	//rooms 3, 9 respectively
+	logic 	[1:0]	[8:0]	CY 	= 	{{Y[0]}, {Y[4]}};	//rooms 3, 9 respectively
+	logic 	[1:0]	[8:0]	DX 	= 	{{X[1]}, {X[4]}};	//rooms 7, 9 respectively
+	logic 	[1:0]	[8:0]	DY 	= 	{{Y[4]}, {Y[5]}};	//rooms 7, 9 respectively
+	logic 	[1:0]	[8:0]	EX 	= 	{{X[0]}, {X[5]}};	//rooms 4, 6 respectively
+	logic 	[1:0]	[8:0]	EY 	= 	{{Y[2]}, {Y[3]}};	//rooms 4, 6 respectively
+	logic 	[1:0]	[8:0]	FX 	= 	{{X[4]}, {X[4]}};	//rooms 3, 6 respectively
+	logic 	[1:0]	[8:0]	FY 	= 	{{Y[0]}, {Y[2]}};	//rooms 3, 6 respectively
+	logic 	[1:0]	[8:0]	GX 	= 	{{X[2]}, {X[4]}};	//rooms 2, 6 respectively
+	logic 	[1:0]	[8:0]	GY 	= 	{{Y[0]}, {Y[3]}};	//rooms 2, 6 respectively
+	logic 	[1:0]	[8:0]	HX 	= 	{{X[5]}, {X[0]}};	//rooms 3, 7 respectively
+	logic 	[1:0]	[8:0]	HY 	= 	{{Y[1]}, {Y[4]}};	//rooms 3, 7 respectively
+	logic 	[1:0]	[8:0]	IX 	= 	{{X[0]}, {X[4]}};	//rooms 1, 3 respectively
+	logic 	[1:0]	[8:0]	IY 	= 	{{Y[0]}, {Y[1]}};	//rooms 1, 3 respectively
+	logic 	[1:0]	[8:0]	JX 	= 	{{X[1]}, {X[3]}};	//rooms 1, 2 respectively
+	logic 	[1:0]	[8:0]	JY 	= 	{{Y[0]}, {Y[0]}};	//rooms 1, 2 respectively
+	logic 	[1:0]	[8:0]	KX 	= 	{{X[3]}, {X[0]}};	//rooms 2, 7 respectively
+	logic 	[1:0]	[8:0]	KY 	= 	{{Y[1]}, {Y[5]}};	//rooms 2, 7 respectively
+	logic 	[1:0]	[8:0]	LX 	= 	{{X[2]}, {X[1]}};	//rooms 2, 4 respectively
+	logic 	[1:0]	[8:0]	LY 	= 	{{Y[1]}, {Y[2]}};	//rooms 2, 4 respectively
+	logic 	[1:0]	[8:0]	MX 	= 	{{X[0]}, {X35}};	//rooms 1, 5 respectively
+	logic 	[1:0]	[8:0]	MY 	= 	{{Y[1]}, {Y[3]}};	//rooms 1, 5 respectively
+
+
+	always_ff @ (posedge Clk) begin
+		if(Reset) begin
+			state 		<= 	notTile;
+			spinCounter <= 	5'd0;
+		end 
+		else begin
+			state 		<= 	next_state;
+			spinCounter <= 	next_spinCounter;
+		end 
+	end 
+
+	always_comb begin	//implement whether character is standing on the tile, return boolean 
+		isOnTile 	= 	1'b0;
+
+	end 
+
+	always_comb begin
+		next_state = state;
+		unique case (state)
+			notTile	: 	begin
+							if() begin		//if it is on a tile  @@IMPLEMENT
+								next_state 		= 	isTile;
+							end 
+						end 
+
+			prespin	: 	begin
+							if(spinCounter == 5'd19) begin
+								next_state 		= 	teleport;
+							end
+						end 
+
+			teleport: 	begin
+							next_state 	= 	postspin;
+						end 
+
+			postspin: 	begin
+							if(spinCounter == 5'd19) begin
+								next_state 		= 	hold;
+								next_spinCounter= 	5'd0;
+							end
+						end 
+
+			hold 	: 	begin
+							if()		//IMPLEMENT WHEN CHARACTER LEAVES TILE
+						end 
+
+			default : 	;
+		endcase
+
+	end 
+
+	always_comb begin
+		xleft_next 	= 	10'd0;
+		ytop_next 	= 	10'd0;
+		atTile 		= 	1'b0;
+		unique case (state)
+			notTile	: 	begin
+							;
+						end 
+
+			prespin	: 	begin
+							atTile 	= 	1'b1;
+							if(spinCounter 	< 	5'd4) begin
+								spin_direction 	= 	2'd0;
+							end 
+							else if(spinCounter	< 	5'd8) begin
+								spin_direction 	= 	2'd1;
+							end 
+							else if(spinCounter	< 	5'd12) begin
+								spin_direction 	= 	2'd2;
+							end 
+							else if(spinCounter	< 	5'd20) begin
+								spin_direction 	= 	2'd3; 
+							end 
+							if(spinCounter == 5'd19) begin
+								next_spinCounter= 	5'd0;
+							end
+							else begin
+								next_spinCounter= 	spinCounter + 5'd1;
+							end 
+						end 
+
+			teleport: 	begin
+							atTile 	= 	1'b1;
+							unique case(ybottom)
+								
+
+
+							endcase
+						end 
+
+			postspin: 	begin
+							if(spinCounter 	< 	5'd4) begin
+								spin_direction 	= 	2'd0;
+							end 
+							else if(spinCounter	< 	5'd8) begin
+								spin_direction 	= 	2'd1;
+							end 
+							else if(spinCounter	< 	5'd12) begin
+								spin_direction 	= 	2'd2;
+							end 
+							else if(spinCounter	< 	5'd20) begin
+								spin_direction 	= 	2'd3; 
+							end 
+							if(spinCounter == 5'd19) begin
+								next_spinCounter= 	5'd0;
+							end
+							else begin
+								next_spinCounter= 	spinCounter + 5'd1;
+							end 
+						end 
+
+			hold	: 	begin
+
+						end 
+
+			default : 	;
+		endcase
+
+		xleft_next	= 	xleft_next 	- 	10'd15;
+		ytop_next 	= 	ytop_next 	- 	10'd20;
+	end 
+
+endmodule

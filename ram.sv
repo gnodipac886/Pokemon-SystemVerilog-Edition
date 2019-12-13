@@ -3,6 +3,55 @@
  * Author: Rishi Thakkar
  * Editor: Eric Dong
  */
+module 	tenseAudioRam		//8000Hz sampling rate
+(	input 	logic 			Clk, PLAY, Reset_h,
+	output	logic 	[15:0]	LC, RC, 
+	output 	logic 	[31:0]	test
+	);
+	logic 	[13:0]	mem_count, next_mem_count;
+	logic 	[12:0] 	count, next_count;
+	logic 	[31:0] 	mem	[0:11999];
+	logic 	[31:0] 	nexttest;
+	// initial
+	// begin
+	// 	 $readmemh("Audio/Hex/TENSE.txt", mem);
+	// end
+
+	always_ff @ (posedge Clk) begin
+		if(Reset_h || ~PLAY) begin
+			count 		<= 	13'd0;
+			mem_count 	<= 	14'd0;
+			LC 			<= 	16'd0;
+			RC 			<= 	16'd0;
+			test		<= 	32'h7FFFFFFF;
+		end 
+		else begin
+			count 		<= 	next_count;
+			mem_count 	<= 	next_mem_count;
+			LC 			<= 	mem[32 * mem_count][31:16];
+			RC 			<= 	mem[32 * mem_count][15:0];
+			test 		<= 	nexttest;
+		end 
+	end 
+
+	always_comb begin
+		next_count 		= 	count;
+		next_mem_count 	= 	mem_count;
+		nexttest 		= 	test;
+		if(count == 13'd6249) begin
+			next_count 		= 	13'd0;
+			next_mem_count 	= 	mem_count 	+ 	1;
+			nexttest 		= 	test * -1;//(test == 32'h7FFFFFFF) ? -32'h7FFFFFFF : 32'h7FFFFFFF;
+		end 
+		else begin
+			next_count 	= 	count 	+ 	1;
+		end
+		if(mem_count == 14'd11999) begin
+			next_mem_count 	= 	14'd0;
+		end 
+	end
+
+endmodule
 
 module  CharacterRam
 (
@@ -19,7 +68,7 @@ logic [23:0] decoded;
 
 initial
 begin
-	 $readmemh("Sprites/Hex_Version/Characters-savedmem.txt", mem);
+	 $readmemh("Sprites/Hex_Version/Characters-savemem.txt", mem);
 end
 
 
