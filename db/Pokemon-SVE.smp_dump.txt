@@ -1,4 +1,21 @@
 
+State Machine - |lab8|gameFSM:gameInstance|state
+Name state.draw_main_game state.fade state.flash_press_enter state.start_screen state.hold 
+state.start_screen 0 0 0 0 0 
+state.flash_press_enter 0 0 1 1 0 
+state.fade 0 1 0 1 0 
+state.draw_main_game 1 0 0 1 0 
+state.hold 0 0 0 1 1 
+
+State Machine - |lab8|frameDrawer:fdinstance|gymTileLogic:tileinstance|state
+Name state.hold state.latch state.postspin state.teleport state.prespin state.notTile 
+state.notTile 0 0 0 0 0 0 
+state.prespin 0 0 0 0 1 1 
+state.teleport 0 0 0 1 0 1 
+state.postspin 0 0 1 0 0 1 
+state.latch 0 1 0 0 0 1 
+state.hold 1 0 0 0 0 1 
+
 State Machine - |lab8|lab8_soc:nios_system|lab8_soc_sdram:sdram|m_next
 Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
 m_next.000000001 0 0 0 0 
