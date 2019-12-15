@@ -6,7 +6,6 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/gymTileLogic.sv}
-vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/gymBoundsChecker.sv}
 vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv}
 vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/VGA_controller.sv}
 vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/testmodule.sv}

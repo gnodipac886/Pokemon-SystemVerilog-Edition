@@ -3,6 +3,7 @@
  * Author: Rishi Thakkar
  * Editor: Eric Dong
  */
+ /*
 module 	tenseAudioRam		//8000Hz sampling rate
 (	input 	logic 			Clk, PLAY, Reset_h,
 	output	logic 	[15:0]	LC, RC, 
@@ -51,7 +52,7 @@ module 	tenseAudioRam		//8000Hz sampling rate
 		end 
 	end
 
-endmodule
+endmodule*/
 
 module  CharacterRam
 (

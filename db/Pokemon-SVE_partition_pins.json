@@ -4,315 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "HEX0[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX4[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX5[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX5[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX5[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX5[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX5[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX5[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX5[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX6[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX6[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX6[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX6[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX7[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX7[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX7[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX7[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX7[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX7[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX7[6]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_R[0]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_R[1]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_R[2]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_R[3]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_R[4]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_R[5]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_R[6]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_R[7]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_G[0]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_G[1]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_G[2]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_G[3]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_G[4]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_G[5]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_G[6]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_G[7]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_B[0]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_B[1]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_B[2]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_B[3]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_B[4]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_B[5]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_B[6]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_B[7]",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_BLANK_N",
+					"name" : "VGA_HS",
 					"strict" : false
 				},
 				{
@@ -320,343 +12,211 @@
 					"strict" : false
 				},
 				{
-					"name" : "VGA_HS",
+					"name" : "DRAWX[0]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_ADDR[0]",
+					"name" : "DRAWX[1]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_ADDR[1]",
+					"name" : "DRAWX[2]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_CS_N",
+					"name" : "DRAWX[3]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_RD_N",
+					"name" : "DRAWX[4]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_WR_N",
+					"name" : "DRAWX[5]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_RST_N",
+					"name" : "DRAWX[6]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[0]",
+					"name" : "DRAWX[7]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[1]",
+					"name" : "DRAWX[8]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[2]",
+					"name" : "DRAWX[9]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[3]",
+					"name" : "DRAWY[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[4]",
+					"name" : "DRAWY[1]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[5]",
+					"name" : "DRAWY[2]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[6]",
+					"name" : "DRAWY[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[7]",
+					"name" : "DRAWY[4]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[8]",
+					"name" : "DRAWY[5]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[9]",
+					"name" : "DRAWY[6]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[10]",
+					"name" : "DRAWY[7]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[11]",
+					"name" : "DRAWY[8]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_ADDR[12]",
+					"name" : "DRAWY[9]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_BA[0]",
+					"name" : "VGA_BLANK_N",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_BA[1]",
+					"name" : "charxcurrpos[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQM[0]",
+					"name" : "charxcurrpos[1]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQM[1]",
+					"name" : "charxcurrpos[2]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQM[2]",
+					"name" : "charxcurrpos[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQM[3]",
+					"name" : "charxcurrpos[4]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_RAS_N",
+					"name" : "charxcurrpos[5]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_CAS_N",
+					"name" : "charxcurrpos[6]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_WE_N",
+					"name" : "charxcurrpos[7]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_CS_N",
+					"name" : "charxcurrpos[8]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[0]",
+					"name" : "charxcurrpos[9]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[1]",
+					"name" : "charycurrpos[0]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[2]",
+					"name" : "charycurrpos[1]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[3]",
+					"name" : "charycurrpos[2]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[4]",
+					"name" : "charycurrpos[3]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[5]",
+					"name" : "charycurrpos[4]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[6]",
+					"name" : "charycurrpos[5]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[7]",
+					"name" : "charycurrpos[6]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[8]",
+					"name" : "charycurrpos[7]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[9]",
+					"name" : "charycurrpos[8]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[10]",
+					"name" : "charycurrpos[9]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[11]",
+					"name" : "atTile",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[12]",
+					"name" : "VGA_CLK",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[13]",
+					"name" : "Reset",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[14]",
+					"name" : "state_num[1]",
 					"strict" : false
 				},
 				{
-					"name" : "OTG_DATA[15]",
+					"name" : "direction[1]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQ[0]",
+					"name" : "charIsMoving",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQ[1]",
+					"name" : "charIsRunning",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQ[2]",
+					"name" : "state_num[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQ[3]",
+					"name" : "state_num[2]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQ[4]",
+					"name" : "state_num[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DRAM_DQ[5]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[6]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[7]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[8]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[9]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[10]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[11]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[12]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[13]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[14]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[15]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[16]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[17]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[18]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[19]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[20]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[21]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[22]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[23]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[24]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[25]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[26]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[27]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[28]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[29]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[30]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_DQ[31]",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[1]",
-					"strict" : false
-				},
-				{
-					"name" : "CLOCK_50",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[0]",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tms",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tck",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdi",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdo",
+					"name" : "direction[0]",
 					"strict" : false
 				}
 			]

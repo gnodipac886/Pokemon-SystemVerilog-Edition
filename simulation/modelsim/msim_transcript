@@ -12,53 +12,43 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/gymTileLogic.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:32:00 on Dec 12,2019
+# Start time: 23:40:08 on Dec 12,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Eric/Desktop/Pokemon-SVE" C:/Users/Eric/Desktop/Pokemon-SVE/gymTileLogic.sv 
 # -- Compiling module gymTileLogic
 # 
 # Top level modules:
 # 	gymTileLogic
-# End time: 04:32:00 on Dec 12,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/gymBoundsChecker.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:32:00 on Dec 12,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Eric/Desktop/Pokemon-SVE" C:/Users/Eric/Desktop/Pokemon-SVE/gymBoundsChecker.sv 
-# -- Compiling module gymBoundsChecker
-# 
-# Top level modules:
-# 	gymBoundsChecker
-# End time: 04:32:00 on Dec 12,2019, Elapsed time: 0:00:00
+# End time: 23:40:09 on Dec 12,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:32:00 on Dec 12,2019
+# Start time: 23:40:09 on Dec 12,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Eric/Desktop/Pokemon-SVE" C:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv 
 # -- Compiling module frameDrawer
 # 
 # Top level modules:
 # 	frameDrawer
-# End time: 04:32:00 on Dec 12,2019, Elapsed time: 0:00:00
+# End time: 23:40:09 on Dec 12,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/VGA_controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:32:00 on Dec 12,2019
+# Start time: 23:40:09 on Dec 12,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Eric/Desktop/Pokemon-SVE" C:/Users/Eric/Desktop/Pokemon-SVE/VGA_controller.sv 
 # -- Compiling module VGA_controller
 # 
 # Top level modules:
 # 	VGA_controller
-# End time: 04:32:00 on Dec 12,2019, Elapsed time: 0:00:00
+# End time: 23:40:09 on Dec 12,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/testmodule.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:32:00 on Dec 12,2019
+# Start time: 23:40:09 on Dec 12,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Eric/Desktop/Pokemon-SVE" C:/Users/Eric/Desktop/Pokemon-SVE/testmodule.sv 
 # -- Compiling module testmodule
 # 
 # Top level modules:
 # 	testmodule
-# End time: 04:32:00 on Dec 12,2019, Elapsed time: 0:00:00
+# End time: 23:40:09 on Dec 12,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlib lab8_soc
 # ** Warning: (vlib-34) Library already exists at "lab8_soc".
@@ -69,40 +59,43 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE {C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:32:01 on Dec 12,2019
+# Start time: 23:40:10 on Dec 12,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Eric/Desktop/Pokemon-SVE" C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv 
 # -- Compiling module testbench_pokemon
 # 
 # Top level modules:
 # 	testbench_pokemon
-# End time: 04:32:01 on Dec 12,2019, Elapsed time: 0:00:00
+# End time: 23:40:10 on Dec 12,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab8_soc -voptargs="+acc"  testbench_pokemon
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab8_soc -voptargs=""+acc"" testbench_pokemon 
-# Start time: 04:32:01 on Dec 12,2019
+# Start time: 23:40:10 on Dec 12,2019
 # Loading sv_std.std
 # Loading work.testbench_pokemon
 # Loading work.testmodule
 # Loading work.frameDrawer
-# Loading work.gymBoundsChecker
 # Loading work.gymTileLogic
 # Loading work.VGA_controller
+# ** Warning: (vsim-3839) C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(49): Variable '/testbench_pokemon/VGA_VS', driven via a port connection, is multiply driven. See C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_pokemon File: C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
+# ** Warning: (vsim-3839) C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(48): Variable '/testbench_pokemon/VGA_VS', driven via a port connection, is multiply driven. See C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_pokemon File: C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
+# ** Warning: (vsim-3839) C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(35): Variable '/testbench_pokemon/VGA_VS', driven via a port connection, is multiply driven. See C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_pokemon File: C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Eric  Hostname: M8  ProcessID: 12120
-#           Attempting to use alternate WLF file "./wlftm8b5ms".
+#           Attempting to use alternate WLF file "./wlfty8ih74".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftm8b5ms
+#           Using alternate file: ./wlfty8ih74
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 2000 ns
 add wave -position insertpoint  \
-sim:/testbench_pokemon/testint/fbint/tileinstance/xleft_next_out \
-sim:/testbench_pokemon/testint/fbint/tileinstance/ytop_next_out \
 sim:/testbench_pokemon/testint/fbint/tileinstance/state \
 sim:/testbench_pokemon/testint/fbint/tileinstance/isOnTile \
 sim:/testbench_pokemon/testint/fbint/tileinstance/xleft \
@@ -110,16 +103,32 @@ sim:/testbench_pokemon/testint/fbint/tileinstance/ytop \
 sim:/testbench_pokemon/testint/fbint/tileinstance/xleft_next \
 sim:/testbench_pokemon/testint/fbint/tileinstance/ytop_next \
 sim:/testbench_pokemon/testint/fbint/tileinstance/spinCounter
+add wave -position insertpoint  \
+sim:/testbench_pokemon/testint/fbint/charxcurrpos \
+sim:/testbench_pokemon/testint/fbint/charycurrpos \
+sim:/testbench_pokemon/testint/fbint/FBread_address \
+sim:/testbench_pokemon/testint/fbint/charxnextpos \
+sim:/testbench_pokemon/testint/fbint/charynextpos \
+sim:/testbench_pokemon/testint/fbint/xleft_next \
+sim:/testbench_pokemon/testint/fbint/ytop_next
 restart -f
+# ** Warning: (vsim-3839) C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(49): Variable '/testbench_pokemon/VGA_VS', driven via a port connection, is multiply driven. See C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_pokemon File: C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
+# ** Warning: (vsim-3839) C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(48): Variable '/testbench_pokemon/VGA_VS', driven via a port connection, is multiply driven. See C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_pokemon File: C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
+# ** Warning: (vsim-3839) C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(35): Variable '/testbench_pokemon/VGA_VS', driven via a port connection, is multiply driven. See C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_pokemon File: C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
 run 2000ns
 add wave -position insertpoint  \
-sim:/testbench_pokemon/testint/fbint/charxnextpos \
-sim:/testbench_pokemon/testint/fbint/charynextpos
-restart -f
+sim:/testbench_pokemon/VGA_VS
 run 2000ns
 restart -f
-run 2000000ns
-restart -f
-run 20000000ns
-# End time: 05:12:43 on Dec 12,2019, Elapsed time: 0:40:42
-# Errors: 0, Warnings: 2
+# ** Warning: (vsim-3839) C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(49): Variable '/testbench_pokemon/VGA_VS', driven via a port connection, is multiply driven. See C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_pokemon File: C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
+# ** Warning: (vsim-3839) C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(48): Variable '/testbench_pokemon/VGA_VS', driven via a port connection, is multiply driven. See C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_pokemon File: C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
+# ** Warning: (vsim-3839) C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(35): Variable '/testbench_pokemon/VGA_VS', driven via a port connection, is multiply driven. See C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_pokemon File: C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
+run 2000ns
+# End time: 23:44:01 on Dec 12,2019, Elapsed time: 0:03:51
+# Errors: 0, Warnings: 11

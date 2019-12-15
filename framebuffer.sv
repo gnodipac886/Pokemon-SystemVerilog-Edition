@@ -48,8 +48,8 @@ module frameDrawer(	input 	logic 			Clk, VGA_CLK, VGA_VS, DrawEn, Reset,
 	logic 			everyotherframe, 	everyotherframe_next;
 	//logic 	atTile;
 
-	assign 			charxgymstartpos 	= 	10'd224;//10'd288;//10'd224;		//these are the starting x and y positions for the character
-	assign			charygymstartpos 	= 	10'd363;//10'd315;//10'd363;		//these tell you the top left point of the character box
+	assign 			charxgymstartpos 	= 	10'd288;//10'd224;		//these are the starting x and y positions for the character
+	assign			charygymstartpos 	= 	10'd315;//10'd363;		//these tell you the top left point of the character box
 
 	/*-------------------next pixel logic--------------------*/
 	always_ff @ (posedge Clk) begin
@@ -240,7 +240,7 @@ module frameDrawer(	input 	logic 			Clk, VGA_CLK, VGA_VS, DrawEn, Reset,
 			default : 	;
 		endcase
 	end 
-
+/*
 	gymBoundsChecker gyminstance(	.direction(direction), 
 									.charxcurrpos(charxcurrpos),
 									.charycurrpos(charycurrpos),
@@ -270,6 +270,7 @@ module frameDrawer(	input 	logic 			Clk, VGA_CLK, VGA_VS, DrawEn, Reset,
 							.Clk(Clk),
 							.data_Out(Gymdata_Out)
 						);
+*/
 
 	gymTileLogic	tileinstance(	.Clk(Clk),
 									.Reset(Reset),
