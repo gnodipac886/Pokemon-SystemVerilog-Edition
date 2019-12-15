@@ -1,4 +1,4 @@
-module testbench_pokemon();
+/*module testbench_pokemon();
 	timeunit 10ns;
 
 	timeprecision 1ns;
@@ -32,6 +32,7 @@ module testbench_pokemon();
 	initial begin : CLOCK_INITIALIZATION
 
    		Clk = 0;
+   		VGA_VS 	= 1;
    		VGA_CLK = 0;
 		charIsMoving = 0;
 		charIsRunning = 0;
@@ -44,11 +45,13 @@ module testbench_pokemon();
 		Reset 		= 	0;
 		#2	Reset 	=	1;
 		#2	Reset 	= 	0;
+		#1 	VGA_VS 	= 	0;
+		#1 	VGA_VS 	= 	1;
 		#5 state_num = 4'd3;
 	end 
 
-endmodule
-/*module testbench_pokemon();
+endmodule*/
+module testbench_pokemon();
 	timeunit 10ns;
 
 	timeprecision 1ns;
@@ -95,4 +98,4 @@ endmodule
 			ybottom = 	10'd79;
 	end 
 
-endmodule */
+endmodule

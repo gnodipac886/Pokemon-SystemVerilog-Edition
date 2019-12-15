@@ -10,15 +10,15 @@ cModel Technology
 Z0 dC:/Users/Eric/Desktop/Pokemon-SVE/simulation/modelsim
 vframeDrawer
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1576146720
+Z2 !s110 1576215609
 !i10b 1
-!s100 FI=FN1EUb4TlzgYd6C>zi3
-I4W89<dI;^C5?U<dHlRo8M0
+!s100 dSFL1jAGh:OEef8z@PEYk1
+I?g<6[]]WM]<M]fa5VAan:3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 framebuffer_sv_unit
 S1
 R0
-w1576146512
+w1576213805
 8C:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv
 FC:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv
 L0 1
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1576146720.000000
+Z5 !s108 1576215609.000000
 !s107 C:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE|C:/Users/Eric/Desktop/Pokemon-SVE/framebuffer.sv|
 !i113 1
@@ -34,43 +34,17 @@ Z6 o-sv -work work
 Z7 !s92 -sv -work work +incdir+C:/Users/Eric/Desktop/Pokemon-SVE
 Z8 tCvgOpt 0
 nframe@drawer
-vgymBoundsChecker
-R1
-R2
-!i10b 1
-!s100 ];E:k04_JV?W<=0`_RX4b0
-I35TOo55C`g<]8H8MIO;mH0
-R3
-!s105 gymBoundsChecker_sv_unit
-S1
-R0
-w1575584224
-8C:/Users/Eric/Desktop/Pokemon-SVE/gymBoundsChecker.sv
-FC:/Users/Eric/Desktop/Pokemon-SVE/gymBoundsChecker.sv
-L0 1
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Users/Eric/Desktop/Pokemon-SVE/gymBoundsChecker.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE|C:/Users/Eric/Desktop/Pokemon-SVE/gymBoundsChecker.sv|
-!i113 1
-R6
-R7
-R8
-ngym@bounds@checker
 vgymTileLogic
 R1
-R2
+!s110 1576215608
 !i10b 1
-!s100 ARCPEL<4?9g^hdQm;n7@K2
-ILL;PekEblm0Y`gkD1S5fU1
+!s100 T=7K<?:z`GB`iWCQSVj680
+IBF4NH8]9n0L[f_AUA9gb:2
 R3
 !s105 gymTileLogic_sv_unit
 S1
 R0
-w1576146283
+w1576186904
 8C:/Users/Eric/Desktop/Pokemon-SVE/gymTileLogic.sv
 FC:/Users/Eric/Desktop/Pokemon-SVE/gymTileLogic.sv
 L0 1
@@ -78,7 +52,7 @@ R4
 r1
 !s85 0
 31
-R5
+!s108 1576215608.000000
 !s107 C:/Users/Eric/Desktop/Pokemon-SVE/gymTileLogic.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE|C:/Users/Eric/Desktop/Pokemon-SVE/gymTileLogic.sv|
 !i113 1
@@ -88,15 +62,15 @@ R8
 ngym@tile@logic
 vtestbench_pokemon
 R1
-!s110 1576146721
+!s110 1576215610
 !i10b 1
-!s100 CH`M33CYbg_cBaE1<^1g]3
-I<[JL0>KjD^z`GB1I<I5IF1
+!s100 <^VAMG3N`g]cF^SQoTO`@3
+INGfZM>=LYF4?fnGi3GVAR2
 R3
 !s105 testbench_pokemon_sv_unit
 S1
 R0
-w1576146700
+w1576215580
 8C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
 FC:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv
 L0 1
@@ -104,7 +78,7 @@ R4
 r1
 !s85 0
 31
-!s108 1576146721.000000
+!s108 1576215610.000000
 !s107 C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Eric/Desktop/Pokemon-SVE|C:/Users/Eric/Desktop/Pokemon-SVE/testbench_pokemon.sv|
 !i113 1
