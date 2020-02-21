@@ -1,4 +1,4 @@
-# Pokemon-SVE
+# Pokemon-SystemVerilog Edition
 System Verilog Pokemon for ECE 385 Final Project
 
 ## Introduction 
